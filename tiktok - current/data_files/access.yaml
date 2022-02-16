@@ -1,0 +1,6 @@
+#get the app key from tiktok developer account
+app_key: add_app_key
+#input app secret
+app_secret: add_secret
+#input random state
+state: add_state
