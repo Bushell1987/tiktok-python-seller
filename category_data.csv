@@ -1,0 +1,1239 @@
+,id,parent_id,local_display_name,is_leaf
+0,600001,0,Home Supplies,False
+1,600024,0,Kitchenware,False
+2,600154,0,Textiles & Soft Furnishings,False
+3,600942,0,Household Appliances,False
+4,601152,0,Womenswear & Underwear,False
+5,601352,0,Shoes,False
+6,601450,0,Beauty & Personal Care,False
+7,601739,0,Phones & Electronics,False
+8,601755,0,Computers & Office Equipment,False
+9,602118,0,Pet Supplies,False
+10,602284,0,Baby and Maternity,False
+11,603014,0,Sports & Outdoor,False
+12,604206,0,Toys & Musical Instruments,False
+13,604453,0,Furniture,False
+14,604579,0,Tools & Hardware,False
+15,604968,0,Home Improvement,False
+16,605196,0,Vehicle Supplies,False
+17,605248,0,Fashion Accessories,False
+18,802184,0,Kids' Fashion,False
+19,824328,0,Menswear & Underwear,False
+20,824584,0,Luggage & Bags,False
+21,603391,603014,Event Souvenirs,True
+22,604459,604453,Furniture Accessories,True
+23,802312,802184,Boys' Clothes,False
+24,803592,802184,Girls' Clothes,False
+25,805128,802184,Boys' Footwear,False
+26,806024,802184,Girls' Footwear,False
+27,806792,802184,Kids' Fashion Accessories,False
+28,808328,600154,Bedding,False
+29,809992,600154,Household Textiles,False
+30,811016,600154,Fabrics & Sewing Supplies,False
+31,812808,602118,Dog & Cat Furniture,False
+32,813960,602118,Dog & Cat Clothing,False
+33,815624,602118,Dog & Cat Litter,False
+34,816392,602118,Dog & Cat Grooming,False
+35,818696,602118,Dog & Cat Accessories,False
+36,819848,602118,Fish & Aquatic Supplies,False
+37,821000,602118,Reptile & Amphibian Supplies,False
+38,821896,602118,Bird Supplies,False
+39,822792,602118,Small Animal Supplies,False
+40,824840,601755,"Desktop Computers, Laptops & Tablets",False
+41,825352,601755,Desktop & Laptop Components,False
+42,826760,601755,Peripherals & Accessories,False
+43,828168,601755,Data Storage & Software,False
+44,829192,601755,Network Components,False
+45,830344,601755,Office Equipment,False
+46,831112,601755,Office Stationery & Supplies,False
+47,834568,603014,Sport & Outdoor Clothing,False
+48,834696,603014,Sports Footwear,False
+49,834824,603014,Sports & Outdoor Accessories,False
+50,834952,603014,Ball Sports,False
+51,835080,603014,Water Sports,False
+52,835208,603014,Winter Sports,False
+53,835336,603014,Fitness Equipment,False
+54,835464,603014,Camping & Hiking,False
+55,835592,603014,Leisure & Fitness Sports,False
+56,839944,824328,Men's Tops,False
+57,840072,824328,Men's Bottoms,False
+58,840328,824328,Men's Special Clothing,False
+59,840456,824328,Men's Underwear,False
+60,840584,824328,Men's Sleepwear,False
+61,840712,824328,Men's Suits & Overalls,False
+62,842248,601152,Women's Tops,False
+63,842376,601152,Women's Bottoms,False
+64,842504,601152,Women's Dresses,False
+65,842632,601152,Women's Special Clothing,False
+66,842760,601152,Women's Suits & Overalls,False
+67,842888,601152,Women's Underwear,False
+68,843016,601152,Women's Sleepwear,False
+69,843144,601152,Dressmaking Fabrics,False
+70,844168,600942,Kitchen Appliances,False
+71,844808,600942,Home Appliances,False
+72,845064,600942,Large Home Appliances,False
+73,845320,600942,Commercial Appliances,False
+74,848648,601450,Makeup & Perfume,False
+75,848776,601450,Skincare,False
+76,848904,601450,Hair Care & Styling,False
+77,849032,601450,"Hand, Foot & Nail Care",False
+78,849160,601450,Bath & Body Care,False
+79,849288,601450,Men's Care,False
+80,849416,601450,Personal Care Appliances,False
+81,849544,601450,Eye & Ear Care,False
+82,849672,601450,Nasal & Oral Care,False
+83,849800,601450,Feminine Care ,False
+84,851848,600001,Home Organizers,False
+85,851976,600001,Bathroom Supplies,False
+86,852104,600001,Home Decor,False
+87,852232,600001,Household Cleaning,False
+88,852360,600001,Laundry Products,False
+89,852488,600001,Festive & Party Supplies,False
+90,852616,600001,Miscellaneous Home,False
+91,858504,600024,Tea & Coffeeware,False
+92,858632,600024,Kitchen Knives,False
+93,858760,600024,Barbecue,False
+94,858888,600024,Bar & Wine Utensils,False
+95,859016,600024,Bakeware,False
+96,859144,600024,Cookware,False
+97,859272,600024,Cutlery & Tableware,False
+98,859400,600024,Drinkware,False
+99,859528,600024,Kitchen Utensils & Gadgets,False
+100,859656,604206,Dolls & Stuffed Toys,False
+101,859784,604206,Educational Toys,False
+102,859912,604206,Sports & Outdoor Play,False
+103,860040,604206,Electric & Remote Control Toys,False
+104,860168,604206,Games & Puzzles,False
+105,860296,604206,Classic & Novelty Toys,False
+106,860552,604206,Musical Instruments,False
+107,871048,604453,Indoor Furniture,False
+108,871176,604453,Outdoor Furniture,False
+109,871304,604453,Children's Furniture,False
+110,871432,604453,Commercial Furniture,False
+111,871560,604579,Power Tools,False
+112,871688,604579,Hand Tools,False
+113,871816,604579,Measuring Tools,False
+114,871944,604579,Garden Tools,False
+115,872072,604579,Soldering Equipment,False
+116,872200,604579,Tool Organizers,False
+117,872328,604579,Hardware,False
+118,872456,604968,Lights & Lighting,False
+119,872584,604968,Electrical Equipment & Supplies,False
+120,872712,604968,Kitchen Fixtures,False
+121,872840,604968,Smart Home Systems,False
+122,872968,604968,Building Supplies,False
+123,873096,604968,Bathroom Fixtures,False
+124,873224,604968,Security & Safety,False
+125,873352,604968,Garden Supplies,False
+126,877320,602284,Baby Clothing & Shoes,False
+127,877576,602284,Baby Travel Essentials,False
+128,877832,602284,Nursing & Feeding,False
+129,878216,602284,Baby Furniture,False
+130,878600,602284,Baby Safety,False
+131,878984,602284,Baby Toys,False
+132,879112,602284,Nappies & Baby Care,False
+133,880008,602284,Maternity Supplies,False
+134,900488,601352,Women's Shoes,False
+135,900616,601352,Men's Shoes,False
+136,900744,601352,Shoe Accessories,False
+137,902408,824584,Women's Bags,False
+138,902536,824584,Men's Bags,False
+139,902664,824584,Luggage & Travel Bags,False
+140,902792,824584,Functional Bags,False
+141,902920,824584,Bag Accessories,False
+142,905224,605248,Clothes Accessories,False
+143,905352,605248,Eyewear,False
+144,905480,605248,Watches & Accessories,False
+145,905608,605248,Jewellery & Accessories,False
+146,905864,605248,Hair Accessories,False
+147,909064,601739,Phones & Accessories,False
+148,909192,601739,Cameras & Photography,False
+149,909320,601739,Audio & Video,False
+150,909448,601739, Gaming & Consoles ,False
+151,909576,601739,Smart & Wearable Devices,False
+152,909704,601739,E-book Devices,False
+153,929928,605196,Car Electronics,False
+154,930056,605196,Car Exterior Accessories,False
+155,930184,605196,Car Interior Accessories,False
+156,936712,603014,Fan Shop,False
+157,937736,603014,Sports Collectibles,False
+158,940296,605196,Car Repair Tools,False
+159,940424,605196,Car Lights,False
+160,940680,605196,"Quads, Motorhomes & Boats",False
+161,940808,605196,Car Washing & Maintenance,False
+162,940936,605196,Motorcycle Accessories & Parts,False
+163,600009,852488,Festive Decorations,True
+164,600017,852488,Balloons,True
+165,600019,852488,Spray/Snow Spray,True
+166,600029,859528,Preserving Containers,True
+167,600032,859400,Vacuum Flasks,True
+168,600033,859272,Placemats & Coasters	,True
+169,600036,859400,Glasses	,True
+170,600042,859400,Mugs,True
+171,600047,859400,Drinkware Accessories,True
+172,600048,859400,Water Bottles	,True
+173,600059,859272,Lunch Boxes	,True
+174,600060,859528,Fruit & Vegetable Utensils,True
+175,600063,859272,Chopsticks,True
+176,600064,859272,Plates,True
+177,600069,859272,Bowls,True
+178,600070,859272,Forks,True
+179,600071,859272,Tableware Sets,True
+180,600072,859272,Knives,True
+181,600073,859272,Spoons,True
+182,600075,858888,Bar Utensils,True
+183,600080,858888,Wine Racks,True
+184,600081,858888,Bar Sets,True
+185,600095,859400,Cups & Saucers	,True
+186,600096,858504,Coffee Pots,True
+187,600100,858504,Coffee Sets,True
+188,600102,858504,Milk Jugs,True
+189,600103,858504,Coffee-Making Tools	,True
+190,600119,859016,Baking Tins & Moulds,True
+191,600121,859528,Measuring Utensils,True
+192,600127,859528,Kitchen Timers,True
+193,600132,859528,Meat & Poultry Utensils,True
+194,600135,859528,Sieves and Colanders,True
+195,600139,859528,Other,True
+196,600145,858632,Kitchen Knives,True
+197,600146,859144,Pots,True
+198,600148,859528,Cooking Utensils,True
+199,600151,858632,Chopping Boards,True
+200,600152,859016,Baking Utensils,True
+201,600157,808328,Blankets & Throws,True
+202,600165,808328,Sheets & Pillowcases,True
+203,600203,809992,Chair Covers,True
+204,600204,809992,Tablecloths & Runners	,True
+205,600221,809992,"Carpets, Mats & Rugs	",True
+206,600251,811016,Sewing Fabric Kits	,True
+207,600252,811016,Sewing Tool Kits	,True
+208,600299,852104,Statues & Figurines,True
+209,600321,852104,Clocks,True
+210,600338,852104,Wall Stickers,True
+211,600341,852104,Photo Frames,True
+212,600347,852104,Hooks & Shelves,True
+213,600378,852232,Dusters/Duster Heads,True
+214,600396,852232,Cleaning Gloves,True
+215,600401,852232,Trash Bags,True
+216,600403,852232,Bins,True
+217,600405,851976,Toilet Brushes,True
+218,600406,851976,Toilet Seat Covers,True
+219,600409,852232,Cleaning Cloths,True
+220,600416,851976,Soap Dispensers,True
+221,600417,852232,Brooms ,True
+222,600418,852232,Cleaning Brushes,True
+223,600423,852232,Mops,True
+224,600427,852232,Aprons,True
+225,600430,851976,Bathroom Tumblers,True
+226,600436,851976,Toothbrush Holders,True
+227,600439,851976,Shower Curtains,True
+228,600447,851976,Soap Dishes,True
+229,600451,851976,Foot Basins/Foot Tubs,True
+230,600466,852232,Pest & Weed Control,True
+231,600475,852232,Formaldehyde Removers,True
+232,600477,852232,Home Fragrance,True
+233,600569,852616,Rain Cloths,True
+234,600570,852616,Umbrellas,True
+235,600573,852616,Raincoats,True
+236,600574,852616,Rain Shoes,True
+237,600621,851848,Storage Boxes & Bins,True
+238,600686,851848,Storage Baskets,True
+239,600747,852360,Washing Bags,True
+240,600748,851848,Hangers & Pegs,True
+241,600750,852360,Washing Lines,True
+242,600756,852360,Ironing Boards,True
+243,600758,852360,Drying Racks,True
+244,600812,852232,Household Cleaning Products,True
+245,600839,852232,Toilet Paper & Kitchen Roll,True
+246,600852,845064,Television,True
+247,601090,844808,Air Purifiers,True
+248,601092,844808,Humidifiers,True
+249,601095,844808,Heaters,True
+250,601100,844808,Irons,True
+251,601102,844808,Vacuum Cleaners,True
+252,601104,844808,Fans,True
+253,601106,844808,Household Appliance Parts,True
+254,601107,844808,Clothes Steamers	,True
+255,601108,844808,Dehumidifiers,True
+256,601116,844808,Electric Window Cleaners	,True
+257,601194,839944,Waistcoats & Gilets,True
+258,601195,839944,Shirts,True
+259,601196,840072,Shorts,True
+260,601197,839944,Jackets & Coats,True
+261,601202,840072,Jeans,True
+262,601210,840712,Sets,True
+263,601213,839944,Hoodies & Jumpers,True
+264,601216,840712,Suits,True
+265,601218,840072,Trousers,True
+266,601223,839944,Knitwear,True
+267,601226,839944,Tops & T-shirts,True
+268,601247,842888,Knickers,True
+269,601259,842888,Shapewear,True
+270,601262,842888,Bras,True
+271,601264,842376,Skirts,True
+272,601265,842248,Blouses & Shirts,True
+273,601266,842376,Shorts,True
+274,601267,842248,Jackets & Coats,True
+275,601270,842504,Wedding Dresses,True
+276,601271,842504,Formal Dresses,True
+277,601274,842376,Leggings,True
+278,601276,842376,Jeans,True
+279,601277,842376,Trousers,True
+280,601280,842760,Overalls,True
+281,601281,842504,Casual Dresses,True
+282,601282,842248,Vests,True
+283,601284,842248,Knitwear,True
+284,601291,842760,Sets,True
+285,601295,842248,Hoodies & Jumpers,True
+286,601296,842760,Suits,True
+287,601302,842248,Tops & T-shirts,True
+288,601357,900616, Trainers,True
+289,601364,900616, Sandals & Flip Flops,True
+290,601366,900744, Insoles & Heel Liners,True
+291,601369,900616, Oxford,True
+292,601374,900616,Slippers,True
+293,601376,900616, Boots,True
+294,601387,900488, Oxfords,True
+295,601396,900488, Heels,True
+296,601405,900488, Slippers,True
+297,601409,900488,Boots,True
+298,601417,902792, Laptop Bags,True
+299,601419,902664,Travel Bags,True
+300,601429,902536, Crossbody & Shoulder Bags,True
+301,601430,902536, Wallets,True
+302,601431,902536, Clutches,True
+303,601432,902536, Backpacks,True
+304,601439,902408, Crossbody & Shoulder Bags,True
+305,601440,902792,Make-up Bags,True
+306,601441,902408,Wallets,True
+307,601444,902408, Clutches & Wristlets ,True
+308,601445,902408,Handbags,True
+309,601446,902408,Backpacks,True
+310,601449,902664, Luggage Accessories,True
+311,601454,849032,Hand & Foot Masks	,True
+312,601456,849032,Foot Odour Control	,True
+313,601469,848904,Shampoo & Conditioner	,True
+314,601476,849800,Feminine Hygiene	,True
+315,601477,849800,Sanitary Towels	,True
+316,601480,849032,"Hand Lotions, Creams & Scrubs	",True
+317,601490,849160,Body Care Kits,True
+318,601492,849160,Body Creams & Lotions	,True
+319,601493,849160,Body Wash & Soap,True
+320,601494,849160,Talcum Powder,True
+321,601495,849160,Hair Removal Cream & Wax	,True
+322,601498,849160,Deodorants	,True
+323,601506,849160,Body Scrubs & Peels	,True
+324,601508,849032,Hand Wash	,True
+325,601511,849160,Breast Care ,True
+326,601513,848904,Mousse & Gel,True
+327,601516,848904,Hair Dye	,True
+328,601520,849288,Bath & Body Care	,True
+329,601529,848648,Makeup Sets	,True
+330,601534,848648,Lipstick & Lip Gloss	,True
+331,601537,848648,Makeup Tools	,True
+332,601550,848648,Blemish Balm and Colour Control	,True
+333,601552,848648,Makeup Fixer Spray,True
+334,601554,848648,Concealer & Foundation	,True
+335,601555,848648,Bronzer & Highlighter	,True
+336,601556,848648,Makeup Base and Primers	,True
+337,601558,848648,Powder	,True
+338,601560,848648,Blusher	,True
+339,601565,849288,Makeup,True
+340,601582,848648,Body Makeup,True
+341,601583,848648,Perfume	,True
+342,601585,848648,Mascara,True
+343,601586,848648,Eyebrow Pencils/Powder/Paste,True
+344,601587,848648,Eyeliner & Lipliner	,True
+345,601588,848648,Eyeshadow,True
+346,601595,848776,Lip Treatments	,True
+347,601602,848776,Facial Sunscreen & Sun Care	,True
+348,601608,848776,Toners	,True
+349,601609,848776,Facial Cleansers	,True
+350,601610,848776,Facial Massage Cream,True
+351,601611,848776,Skin Care Kits,True
+352,601613,848776,Face Scrubs & Peels	,True
+353,601615,848776,Moisturisers & Mists	,True
+354,601616,848776,Face Masks	,True
+355,601618,848648,Makeup Remover	,True
+356,601619,848776,Serums & Essences	,True
+357,601627,849288,Skincare	,True
+358,601644,849288,Shaving Foam & Aftershave	,True
+359,601646,848776,Eye Treatments	,True
+360,601653,848776,Nasal Treatment,True
+361,601660,849416,Massage Devices	,True
+362,601664,849416,Body Beauty Devices	,True
+363,601669,849416,Electric Eyebrow Shapers,True
+364,601672,849416,Facial Beauty Devices	,True
+365,601677,849416,Accessories	,True
+366,601681,849288,Hair Care	,True
+367,601686,849160,Body Shaping Products,True
+368,601690,849672,Teeth Whitening	,True
+369,601692,849672,Oral Care Kits,True
+370,601693,849672,Oral Spray,True
+371,601694,849672,Mouthwash,True
+372,601696,849672,Toothpastes,True
+373,601697,849672,Toothbrushes	,True
+374,601698,849672,Dental Floss	,True
+375,601733,848776,Skincare Tools	,True
+376,601737,849544,Sleep Masks	,True
+377,601756,824840,Laptops,True
+378,601760,826760,Keyboards & Mice	,True
+379,601783,825352,Monitors,True
+380,601836,824840,Desktop Computers	,True
+381,601893,909192, Camera Accessories,True
+382,601925,909064," Cases , Screen Protectors & Stickers",True
+383,601927,909064, Phone Batteries,True
+384,601936,909064, Phone Straps & Charms,True
+385,601937,909064," Cables, Chargers & Adapters",True
+386,601990,909320, Earphones & Headphones,True
+387,602029,909320,Speakers,True
+388,602080,909576, Wearable Accessories,True
+389,602083,909576,Smart Watches,True
+390,602097,909064, Mobile Phones,True
+391,602296,879112,Baby Skincare	,True
+392,602301,877320,Baby Jewelry ,True
+393,602317,879112,Hair Care & Body Wash	,True
+394,602532,878600,Safety Locks & Straps	,True
+395,602533,878600,Electric Shock Protection,True
+396,602534,878600,Edge & Corner Guards	,True
+397,602536,878600,Bed Rails & Guards	,True
+398,602538,878600,Monitors	,True
+399,602608,879112,Baby Hair Trimmers,True
+400,602622,879112,Baby Hair Dryers,True
+401,602672,879112,Baby Hand Sanitizer,True
+402,602673,879112,Laundry Detergent	,True
+403,602676,879112,Nasal & Oral Care	,True
+404,602678,879112,Baby Clothes Sterilizers,True
+405,602707,877832,Food Processors	,True
+406,602734,878216,Mattresses & Bedding	,True
+407,602760,878216,Bouncers & Rockers	,True
+408,602761,878216,Cots & Beds	,True
+409,602787,877320,Shoes	,True
+410,603002,831112,Writing & Correction Tools	,True
+411,603041,834952,Football,True
+412,603042,834568,Jerseys,True
+413,603065,834952,Badminton,True
+414,603084,835592,Yoga & Pilates,True
+415,603131,835080,Surfing,True
+416,603171,834696,Dance Shoes,True
+417,603221,834952,Tennis,True
+418,603247,835592,Track & Field,True
+419,603288,835592,Boxing & Martial Arts,True
+420,603295,835592,Judo,True
+421,603301,835592,Wrestling,True
+422,603304,835592,Nunchucks,True
+423,603317,835592,Taekwondo,True
+424,603331,834952,Billiards,True
+425,603353,835336,Hula Hoops,True
+426,603355,835336,Ab Training,True
+427,603358,835336,Gym Balls,True
+428,603366,834824,Pedometers,True
+429,603375,835336,Skipping Ropes,True
+430,603389,835592,Archery,True
+431,603396,834952,Table Tennis,True
+432,603437,834952,Volleyball,True
+433,603477,835592,Horse Riding,True
+434,603493,835592,Skateboarding,True
+435,603524,834952,Basketball,True
+436,603573,834952,Golf ,True
+437,603579,834696,Golf Shoes,True
+438,603605,835592,Darts,True
+439,603625,835208,Ice Hockey,True
+440,603641,834952,Squash,True
+441,603646,834952,Bowling,True
+442,603652,834952,Baseball & Softball,True
+443,603654,834824,Sports & Outdoor Hats,True
+444,603682,834824,Sports Bags,True
+445,603704,834568,Joggers,True
+446,603705,834568,Tracksuits,True
+447,603706,834568,Sports Outerwear,True
+448,603729,834568,Sports Bras,True
+449,603744,834696,Baseball Shoes,True
+450,603748,834696,Basketball Shoes,True
+451,603750,834696,Volleyball Shoes,True
+452,603751,834696,Running Shoes,True
+453,603753,834696,Other Sports Shoes,True
+454,603755,834696,Tennis Shoes,True
+455,603758,834696,Badminton Shoes,True
+456,603760,834696,Football Boots,True
+457,603818,835592,Fishing,True
+458,603835,835464,Knives & Survival Kits,True
+459,603856,834696,Hiking Shoes,True
+460,603872,834824,Protective Gear,True
+461,603917,835464,Camping Cookware,True
+462,603952,835464,Hammocks,True
+463,603970,835464,Camping Lighting,True
+464,604054,835464,Sleeping Bags & Bedding,True
+465,604059,835464,Compasses,True
+466,604065,835464,Binoculars & Telescopes,True
+467,604390,859656,Doll Accessories	,True
+468,604468,871048,Sofas	,True
+469,604497,871048,Shelves/Racks,True
+470,605201,930184,Decoration,True
+471,605213,930184,Stowing & Tidying,True
+472,605219,930184,Anti-Slip Mats,True
+473,605242,930056,Sunshades,True
+474,605251,905480,Men's Watches,True
+475,605254,905480,Women's Watches,True
+476,605257,905480, Couple Watches,True
+477,605268,905608,Earrings,True
+478,605271,905864, Headbands,True
+479,605272,905608,Anklets,True
+480,605273,905608,Rings,True
+481,605274,905608, Bracelets & Bangles,True
+482,605280,905608,Necklaces,True
+483,605281,905224,Brooches,True
+484,605289,905224,Accessory Sets,True
+485,605302,905352, Frames & Glasses,True
+486,605304,905352,Sunglasses,True
+487,700652,808328,Quilts,True
+488,700653,808328,Pillows,True
+489,700654,852104,Artificial Flowers,True
+490,700655,852104,Vases,True
+491,700656,852104,Decorative Painting,True
+492,700661,809992,Cushions & Cushion Covers	,True
+493,700662,852616,Heat Pads,True
+494,700665,852232,Dust Covers,True
+495,700684,930184,Car Mats,True
+496,700694,877320,Bodysuits & One-pieces,True
+497,700698,859912,Play House Toys,True
+498,700699,859656,Stuffed Toys	,True
+499,700700,860296,Model & Toy Vehicles	,True
+500,700704,877832,Baby Bottles	,True
+501,700705,877576,Prams and Pushchairs	,True
+502,700706,878216,High Chairs	,True
+503,700707,877832,Baby Utensils	,True
+504,700718,880008,Maternity Clothing,True
+505,700740,835592,Indoor Recreation,True
+506,700741,835592,Fencing,True
+507,700751,834568,Swimwear,True
+508,700779,835208,Skiing,True
+509,700781,835080,Diving,True
+510,700782,835464,Tents & Accessories,True
+511,700785,849160,Manual Massage Tools,True
+512,700789,848904,Heatless Styling Tools,True
+513,700790,849032,Manicure & Pedicure Tools	,True
+514,700791,849288,Razors	,True
+515,700795,905480, Watch Accessories,True
+516,802440,802312,Costumes,True
+517,802568,802312,Underwear,True
+518,802696,802312,Nightwear,True
+519,802824,802312,Swimwear,True
+520,802952,802312,Tops,True
+521,803080,802312,Coats & Jackets,True
+522,803208,802312,Bottoms,True
+523,803336,802312,Suits & Sets,True
+524,803464,802312,Socks,True
+525,803720,803592,Costumes,True
+526,803848,803592,Underwear,True
+527,803976,803592,Nightwear,True
+528,804104,803592,Swimwear,True
+529,804232,803592,Tops,True
+530,804360,803592,Coats & Jackets,True
+531,804488,803592,Bottoms,True
+532,804616,803592,Suits & Sets,True
+533,804744,803592,Dresses,True
+534,804872,803592,Skirts,True
+535,805000,803592,Socks,True
+536,805256,805128,Boots,True
+537,805384,805128,Sandals,True
+538,805512,805128,Trainers,True
+539,805640,805128,Slippers,True
+540,805768,805128,Formal Shoes,True
+541,805896,805128,Flat Shoes,True
+542,806152,806024,Boots,True
+543,806280,806024,Sandals,True
+544,806408,806024,Trainers,True
+545,806536,806024,Slippers,True
+546,806664,806024,Flat Shoes,True
+547,806920,806792,Bags & Luggage,True
+548,807048,806792,Headwear,True
+549,807176,806792,Eyewear,True
+550,807304,806792,Hair Accessories,True
+551,807432,806792,Gloves,True
+552,807560,806792,Belts,True
+553,807688,806792,Scarves,True
+554,807816,806792,Watches,True
+555,807944,806792,Jewellery,True
+556,808072,806792,Earmuffs,True
+557,808584,808328,Bedding Sets,True
+558,808840,808328,Duvets,True
+559,809096,808328,Bedspreads,True
+560,809352,808328,Bed Skirts,True
+561,809480,808328,Mattress Pads & Toppers,True
+562,809608,808328,Duvet Covers,True
+563,809736,808328,Mosquito Nets,True
+564,809864,808328,Kids' Bedding,True
+565,810376,809992,Sofa Covers,True
+566,810504,809992,Curtains,True
+567,810888,809992,Towels,True
+568,811144,811016,Textiles & Fabrics,True
+569,811528,811016,Sewing Accessories & Haberdashery,True
+570,811656,811016,Sewing Machines,True
+571,811784,811016,Thread,True
+572,811912,811016,Needles,True
+573,812936,812808,"Beds, Sofas & Mats",True
+574,813064,812808,Houses,True
+575,813192,812808,Cages & Crates,True
+576,813320,812808,Scratching Pads & Posts,True
+577,813448,812808,Cat Hammocks ,True
+578,813576,812808,Cat & Dog Flaps,True
+579,813704,812808,Stairs & Ramps,True
+580,813832,812808,Playpens,True
+581,814088,813960,Coats,True
+582,814216,813960,Shirts,True
+583,814344,813960,Jumpers & Hoodies,True
+584,814472,813960,Lifejackets,True
+585,814600,813960,Dresses,True
+586,814728,813960,Raincoats,True
+587,814856,813960,Boots & Paw Protectors,True
+588,814984,813960,Neck Accessories,True
+589,815112,813960,Eyewear,True
+590,815240,813960,Hair Accessories,True
+591,815368,813960,Hats,True
+592,815496,813960,Costumes,True
+593,815752,815624,Litter Trays & Boxes,True
+594,815880,815624,"Diapers, Pads & Trays",True
+595,816008,815624,Poop Bags & Scoopers,True
+596,816136,815624,Odour & Stain Removers,True
+597,816264,815624,Urine Detectors,True
+598,816520,816392,Shampoos & Conditioners,True
+599,816648,816392,Bath Accessories,True
+600,816776,816392,Combs & Brushes,True
+601,816904,816392,Hair Dryers,True
+602,817032,816392,Grooming Wipes,True
+603,817160,816392,Grooming Scissors,True
+604,817288,816392,Grooming Clippers,True
+605,817544,816392,Claw Care,True
+606,817672,816392,Ear Care,True
+607,817800,816392,Oral Care,True
+608,817928,816392,Eye Care,True
+609,818056,816392,Hair Removal Products,True
+610,818824,818696,"Collars, Harnesses & Leads",True
+611,818952,818696,Training & Behaviour Aids,True
+612,819080,818696,Dog Toys,True
+613,819208,818696,Cat Toys,True
+614,819336,818696,Feeding Supplies,True
+615,819464,818696,Carriers ,True
+616,819592,818696,Memorials,True
+617,819720,818696,Cameras & Monitors,True
+618,819976,819848,Decorations,True
+619,820104,819848,Lighting,True
+620,820232,819848,Aquariums & Tanks,True
+621,820360,819848,Temperature Control ,True
+622,820488,819848,Water Treatment,True
+623,820616,819848,Pumps & Filters,True
+624,820744,819848,Cleaning Tools,True
+625,820872,819848,Feeding Tools,True
+626,821128,821000,Decorations,True
+627,821256,821000,Terrariums,True
+628,821384,821000,Cleaning Tools,True
+629,821512,821000,Temperature Products,True
+630,821640,821000,Lighting,True
+631,821768,821000,Feeding Tools,True
+632,822024,821896,Cages & Accessories,True
+633,822152,821896,Grooming Supplies,True
+634,822280,821896,Toys,True
+635,822408,821896,Swings & Perches,True
+636,822536,821896,Training Aids,True
+637,822664,821896,Feeding Tools,True
+638,822920,822792,Houses & Habitats,True
+639,823048,822792,Toys,True
+640,823176,822792,"Collars, Harnesses & Leads",True
+641,823304,822792,Feeding Supplies,True
+642,823432,822792,Exercise Wheels,True
+643,823560,822792,Grooming Supplies,True
+644,823688,822792,Carriers,True
+645,823816,822792,Health Supplies,True
+646,823944,822792,Odor & Stain Removers,True
+647,825224,824840,Tablets,True
+648,825480,825352,Fans & Heatsinks,True
+649,825608,825352,Processors,True
+650,825736,825352,Motherboards,True
+651,825864,825352,Graphics Cards,True
+652,825992,825352,Power Supply Units,True
+653,826120,825352,RAM,True
+654,826248,825352,UPS & Stabilizers,True
+655,826376,825352,PC Cases,True
+656,826504,825352,Optical Drives,True
+657,826632,825352,Sound Cards,True
+658,827016,826760,USB Hubs & Card Readers,True
+659,827144,826760,Webcams,True
+660,827272,826760,Laptop Covers & Cases,True
+661,827400,826760,Cooling Pads,True
+662,827528,826760,Laptop Stands & Trays,True
+663,827656,826760,Keyboard & Trackpad Covers,True
+664,827784,826760,Laptop Batteries,True
+665,827912,826760,Laptop Chargers & Adaptors,True
+666,828040,826760,Mouse Pads,True
+667,828296,828168,Hard Drives,True
+668,828424,828168,SSD,True
+669,828552,828168,Network Attached Storage (NAS),True
+670,828680,828168,Flash Drives & OTG Cables,True
+671,828808,828168,Hard Disk Enclosures & Docking Stations,True
+672,828936,828168,Compact Discs,True
+673,829320,829192,Modems & Wireless Routers,True
+674,829448,829192,Repeaters,True
+675,829576,829192,Wireless Adapters & Network Cards,True
+676,829704,829192,Powerline Adapters,True
+677,829832,829192,Network Switches & PoE,True
+678,829960,829192,Network Cables & Connectors,True
+679,830088,829192,KVM Switches,True
+680,830216,829192,Print Servers,True
+681,830472,830344,Typewriters,True
+682,830600,830344,Clocking-in Machines,True
+683,830728,830344,Paper Shredders,True
+684,830856,830344,Money Counters,True
+685,830984,830344,Printers & Scanners,True
+686,831240,831112,Office Binding Supplies,True
+687,831368,831112,Office Cutting Supplies,True
+688,831624,831112,School & Office Equipment,True
+689,831752,831112,Art Supplies,True
+690,831880,831112,Notebooks & Paper,True
+691,832008,831112,Letters & Envelopes,True
+692,832136,831112,Gifts & Wrapping,True
+693,832264,831112,Accounting Supplies,True
+694,832392,831112,Storage & Display Supplies,True
+695,835720,834568,Sports T-shirts,True
+696,835848,834568,Sports Vests,True
+697,835976,834568,Sports Shorts,True
+698,836104,834568,Sports Leggings,True
+699,836232,834568,Kids' Sports Clothing,True
+700,836360,834696,Training & Gym Shoes,True
+701,836488,834696,Roller Stakes,True
+702,836616,834696,Kids' Sport Shoes,True
+703,836744,834824,Sports Eyewear,True
+704,836872,834824,Sports Socks,True
+705,837000,834824,Stopwatches,True
+706,837128,834952,Rugby,True
+707,837256,835080,Swimming,True
+708,837384,835080,Boating,True
+709,837512,835208,Snowboarding,True
+710,837640,835336,Weight Training,True
+711,837768,835336,Fitness Machines,True
+712,837896,835336,Pull Up Bars,True
+713,838024,835464,Hiking Sticks,True
+714,838152,835464,Picnic Mats & Baskets,True
+715,838280,835464,Camping Furniture,True
+716,838408,835592,Cycling,True
+717,840840,840712,Overalls,True
+718,840968,840328,Costumes & Accessories,True
+719,841096,840328,Workwear & Uniforms,True
+720,841224,840328,Traditional Dress,True
+721,841352,840456,Underwear,True
+722,841480,840456,Vests,True
+723,841608,840456,Thermal Underwear,True
+724,841736,840456,Socks,True
+725,841864,840584,Pyjamas,True
+726,841992,840584,Bathrobes & Dressing Gowns,True
+727,842120,840584,Nightshirts,True
+728,843400,842248,"Vest, Tank & Tube Tops",True
+729,843528,842248,Bodysuits,True
+730,843656,842632,Costumes & Accessories,True
+731,843784,842632,Workwear & Uniforms,True
+732,843912,842632,Traditional Dress,True
+733,844040,842760,Couples' Clothing Sets,True
+734,844296,842760,Family Clothing Sets,True
+735,844552,842888,Tights,True
+736,844680,842888,Thermal Underwear,True
+737,844936,842888,Bra Accessories,True
+738,845192,842888,Lingerie,True
+739,845448,842888,Socks,True
+740,845576,842888,Bralettes,True
+741,845704,842888,Underwear Sets,True
+742,845832,843016,Pyjamas,True
+743,845960,843016,Bathrobes & Dressing Gowns,True
+744,846088,843016,Nightdresses,True
+745,846216,843144,Batik,True
+746,846344,843144,Lace,True
+747,846472,843144,Cotton,True
+748,846600,843144,Wool,True
+749,846728,843144,"Velvet, Silk & Satin",True
+750,846856,843144,Leather,True
+751,846984,843144,Polyester,True
+752,847112,843144,Denim,True
+753,847240,843144,Canvas,True
+754,847368,843144,Kain Pasang,True
+755,847496,843144,Songket,True
+756,847624,844168,Toasters,True
+757,847752,844168,Rice & Pressure Cookers,True
+758,847880,844168,Egg Boilers,True
+759,848008,844168,Vacuum Sealers,True
+760,848136,844168,Microwaves,True
+761,848264,844168,Countertop Ovens,True
+762,848392,844168,Electric Kettles,True
+763,848520,844168,Juicers & Blenders ,True
+764,849928,845064,Air Conditioner,True
+765,850056,845064,Water Heaters,True
+766,850184,845064,Washing Machines & Dryers,True
+767,850312,845064,Fridges & Freezers,True
+768,850440,845064,Range Hoods,True
+769,850568,845064,"Ovens, Ranges & Hobs",True
+770,850696,845064,Dishwashers,True
+771,850824,845064,Large Appliance Parts,True
+772,850952,845320,Laundry Equipment,True
+773,851080,845320,Cleaning Equipment,True
+774,851208,845320,Commercial Stoves,True
+775,851336,845320,Fan & Exhaust Equipment,True
+776,851464,845320,Refrigeration Equipment,True
+777,851592,845320,Food Processing Equipment,True
+778,851720,845320,Commercial Appliance Parts,True
+779,852744,851848,Storage Bags,True
+780,852872,851848,Storage Holders & Racks,True
+781,853000,851848,Storage Bottles & Jars,True
+782,853128,851848,Hooks & Rails,True
+783,853256,851976,Bathroom Gadgets,True
+784,853384,851976,Bathroom Accessory Sets,True
+785,853512,851976,Bathing Accessories,True
+786,853640,851976,Bath Mats,True
+787,853768,851976,Shower Caps,True
+788,853896,852104,Tapestries,True
+789,854024,852104,Hanging Décor,True
+790,854152,852104,Candles,True
+791,854280,852104,Candle Holders,True
+792,854408,852104,Mirrors,True
+793,854536,852104,Fridge Magnets,True
+794,854664,852104,Fengshui Ornaments,True
+795,854792,852104,Religious Decorations,True
+796,854920,852232,Buckets,True
+797,855048,852232,Scouring Pads,True
+798,855176,852360,Laundry Balls & Discs,True
+799,855304,852360,Washboards,True
+800,855432,852488,Backdrops & Banners,True
+801,855560,852488,Cards,True
+802,855688,852488,Disposable Tableware,True
+803,855816,852488,"Hats, Masks & Props",True
+804,855944,852488,Party Bags & Gifts,True
+805,856072,852488,Cake Decorations,True
+806,856200,852616,Hot Water Bottles,True
+807,856328,852616,Ice Packs,True
+808,856456,852616,Lighter Accessories,True
+809,860424,858504,Coffee Filters,True
+810,860680,858504,Manual Coffee Grinders,True
+811,860808,858504,Teapots,True
+812,860936,858504,Tea Sets,True
+813,861064,858504,Tea-Making Tools,True
+814,861192,858632,Knife Sharpeners,True
+815,861320,858632,Knife Blocks & Storage,True
+816,861448,859656,Dolls,True
+817,861576,858632,Kitchen Scissors,True
+818,861704,859656,Doll Houses & Playsets ,True
+819,861832,858632,Kitchen Knife Sets,True
+820,862216,858760,Barbecues,True
+821,862344,858760,Barbecue Utensils,True
+822,862472,859784,Arts & Crafts,True
+823,862600,859016,Baking Sets,True
+824,862728,859784,Maths Toys,True
+825,862856,859016,Oven Mitts,True
+826,862984,859784,Science & Technology Toys,True
+827,863112,859016,Baking Trays,True
+828,863240,859784,Shape Sorters,True
+829,863368,859016,Decorating Tools,True
+830,863624,859144,Cookware Sets,True
+831,863752,859784,Musical Toys,True
+832,863880,859144,Pans & Woks,True
+833,864008,859144,Steamers,True
+834,864136,859784,Toy Tablets & Computers,True
+835,864264,859144,Pressure Cookers,True
+836,864392,859144,Disposable Cookware,True
+837,864520,859912,Ride-ons Toys,True
+838,864648,859272,Napkins,True
+839,864776,859912,Inflatables & Slides,True
+840,864904,859400,Kettles & Jugs,True
+841,865032,859400,Hip Flasks,True
+842,865160,859912,Play Tents & Tunnels,True
+843,865288,859528,Seasoning Utensils,True
+844,865416,859912,"Pool, Water & Sand Toys",True
+845,865544,859528,Kitchen Thermometers,True
+846,865800,859528,Pasta & Pizza Utensils,True
+847,865928,859528,Ice Cream Utensils,True
+848,866056,859912,Sports Toys,True
+849,866184,859528,Egg Utensils,True
+850,866312,859912,Flying Toys,True
+851,866440,859528,Seafood Utensils,True
+852,866568,859528,Drinking Utensils,True
+853,866696,859912,Kites & Wind Spinners,True
+854,866824,859528,Openers,True
+855,866952,859528,Oil Dispensers,True
+856,867080,860040,Airplanes & Helicopters,True
+857,867208,859528,Peelers & Cutters,True
+858,867336,860040,Motorcycles,True
+859,867464,860040,Boats & Submarines,True
+860,867592,860040,"Cars, Lorries & Trains",True
+861,867720,860040,Animals,True
+862,867848,860040,Tanks,True
+863,867976,860040,Robots ,True
+864,868104,860040,Electric Toy Accessories,True
+865,868232,860168,Magic Cubes,True
+866,868360,860168,Puzzles,True
+867,868488,860168,Dice,True
+868,868616,860168,Board Games,True
+869,868744,860168,Card Games,True
+870,868872,860168,Magic Acrobatics Equipment,True
+871,869000,860296,Pretend Play,True
+872,869128,860296,Novelty & Gag Toys,True
+873,869256,860296,Action & Toy Figures,True
+874,869512,860296,Building Toys,True
+875,869640,860296,Stress Relief Toys,True
+876,869768,860296,Yo-yos ,True
+877,869896,860296,Capsule Toys,True
+878,870024,860296,Spinning Tops,True
+879,870152,860552,Keyboards & Pianos,True
+880,870280,860552,Percussion Instruments,True
+881,870408,860552,Wind Instruments,True
+882,870536,860552,Ukuleles,True
+883,870664,860552,Guitars & Bass Guitars,True
+884,870792,860552,Music Accessories,True
+885,870920,860552,Electronic Synthesizer,True
+886,873480,848776,Acne Treatments,True
+887,873608,849160,Body Masks,True
+888,873736,849160,Body & Massage Oil,True
+889,873864,849160,Sunscreen & Sun Care,True
+890,873992,849416,Electric Shavers,True
+891,874120,849416,Electric Toothbrushes,True
+892,874248,849416,Oral Irrigators,True
+893,874376,849416,Hair Dryers,True
+894,874504,849416,Curlers & Straighteners,True
+895,874632,849416,Hair Trimmers & Clippers,True
+896,875016,849544,Earwax Removal Products,True
+897,875144,849544,Ear Plugs,True
+898,875272,849672,Denture Care,True
+899,875400,849672,Nasal Cleaning,True
+900,875528,849800,Tampons,True
+901,875784,849800,Menstrual Cups,True
+902,875912,871048,Tables & Desks,True
+903,876040,871048,Chairs,True
+904,876168,871048,Stools & Benches,True
+905,876296,871048,Beds,True
+906,876424,871048,Mattresses,True
+907,876680,871048,Cupboards & Cabinets,True
+908,876936,871048,Wardrobes,True
+909,877064,871048,Indoor Furniture Sets,True
+910,877192,871048,TV Stands & Bedside Tables,True
+911,877448,871176,Outdoor Sofas,True
+912,877704,871176,Outdoor Chairs,True
+913,877960,871176,Patio Umbrellas ,True
+914,878088,871176,Patio Swings,True
+915,878344,871176,Outdoor Furniture Sets,True
+916,878472,871176,Outdoor Tables,True
+917,878728,871176,Stools & Benches,True
+918,878856,871176,Outdoor Shelves,True
+919,879240,871304,Beds,True
+920,879368,871304,Sofas,True
+921,879624,871304,Chairs,True
+922,879752,871304,Stools & Benches,True
+923,879880,871304,Cabinets,True
+924,880136,871304,Furniture Sets,True
+925,880264,871304,Tables & Desks,True
+926,880392,871304,Wardrobes,True
+927,880520,871304,Bedside Tables,True
+928,880648,871304,Mattresses,True
+929,880904,871432,Salon Furniture,True
+930,881032,871432,Hotel Furniture,True
+931,881160,871432,School Furniture,True
+932,881288,871432,Restaurant Furniture,True
+933,881416,871432,Office Furniture,True
+934,881544,871560,Electric Drills,True
+935,881672,871560,Electric Screwdrivers,True
+936,881800,871560,Electric Saws,True
+937,881928,871560,Blowers,True
+938,882056,871560,Angle Grinders,True
+939,882184,871560,Polishers,True
+940,882312,871560,Electric Wrenches,True
+941,882440,871560,Nail Guns,True
+942,882568,871560,Spray Guns,True
+943,882696,871560,Heat Guns,True
+944,882824,871560,Glue Guns,True
+945,882952,871560,Power Tool Accessories,True
+946,883080,871560,Power Tool Sets,True
+947,883208,871688,Industrial Tweezers,True
+948,883336,871688,Hammers,True
+949,883464,871688,Knives,True
+950,883592,871688,Pliers,True
+951,883720,871688,Saws,True
+952,883848,871688,Scissors,True
+953,883976,871688,Screwdrivers,True
+954,884104,871688,Wrenches,True
+955,884232,871688,Chisels,True
+956,884360,871688,Axes,True
+957,884488,871688,Tool Kits,True
+958,884616,871816,Optical Instruments,True
+959,884744,871816,Pressure Measuring Instruments,True
+960,884872,871816,Temperature Measuring Instruments,True
+961,885000,871816,Hand Measuring Tools,True
+962,885128,871816,Physical Measuring Instruments,True
+963,885256,871816,Electrical Measuring Instruments,True
+964,885384,871944,Grass Trimmers,True
+965,885512,871944,Leaf Blowers & Vacuums,True
+966,885640,871944,Spades & Shovels,True
+967,885768,871944,Pruning Tools,True
+968,885896,871944,Hoes & Rakes,True
+969,886024,871944,Forks & Scoops,True
+970,886152,871944,Garden Gloves,True
+971,886280,871944,Garden Cleaning Tools,True
+972,886408,872072,Electric Soldering Irons,True
+973,886536,872072,Soldering Stations,True
+974,886664,872072,Welders,True
+975,886792,872072,Welding Accessories,True
+976,886920,872200,Tool Bags,True
+977,887048,872200,Tool Cases & Boxes,True
+978,887176,872200,Tool Racks & Bars,True
+979,887304,872328,Furniture Hardware,True
+980,887432,872328,Window Hardware,True
+981,887560,872328,Door Hardware ,True
+982,887688,872328,Mechanical Hardware,True
+983,887816,872328,Fasteners & Hooks,True
+984,887944,872328,"Ropes, Chains & Hooks ",True
+985,888072,872328,Locks,True
+986,888200,872328,"Adhesives, Tapes & Sealers",True
+987,888328,872328,Clamps,True
+988,888584,877320,Socks & Tights,True
+989,888712,877320,Bottoms,True
+990,888968,877320,Clothing Sets,True
+991,889096,877320,Dresses,True
+992,889224,877320,Tops,True
+993,889352,877320,Outerwear,True
+994,889480,877320,Sleepwear,True
+995,889608,877576,Baby Carriers,True
+996,889736,877576,Pushchair Accessories,True
+997,889864,877576,Baby Vehicle Seats,True
+998,889992,877576,Vehicle Seat Accessories,True
+999,890120,877576,Nappy Bags,True
+1000,890248,877576,Child Harnesses & Reins,True
+1001,890376,877832,Warmers & Sterilizers,True
+1002,890504,877832,Breast Pads,True
+1003,890632,877832,Nursing Covers,True
+1004,890760,877832,Bibs,True
+1005,890888,877832,Dummies,True
+1006,891016,878216,Baby Walkers,True
+1007,891144,878600,Mosquito Netting,True
+1008,891272,878600,Gates & Doorways,True
+1009,891400,878984,Playgyms & Playmats,True
+1010,891528,878984,Playpens,True
+1011,891656,878984,Bath Toys,True
+1012,891784,878984,Cot Mobiles & Rattles,True
+1013,891912,878984,Teethers,True
+1014,892040,878984,Sorting & Stacking Toys,True
+1015,892168,879112,Baby Baths & Bath Seats,True
+1016,892296,879112,Towels & Shower Caps,True
+1017,892424,879112,Baby Bath Supplies,True
+1018,892552,879112,Fragrances,True
+1019,892680,879112,Baby Grooming Tools,True
+1020,892808,879112,Wipes,True
+1021,892936,880008,Nursing Clothes,True
+1022,893064,880008,Maternity Pillows,True
+1023,893192,880008,Supporting Belts,True
+1024,893320,880008,Maternity Skincare,True
+1025,893448,879112,Potties,True
+1026,893576,872456,Lighting Accessories,True
+1027,893704,872456,"Bulbs, Tubes & Strips",True
+1028,893832,872456,Indoor Lighting,True
+1029,893960,872456,Portable Lighting,True
+1030,894088,872456,Outdoor Lighting,True
+1031,894216,872456,Novelty Lighting,True
+1032,894344,872456,Professional Lighting,True
+1033,894472,872456,Commercial Lighting,True
+1034,894600,872584,Connectors & Terminals,True
+1035,894728,872584,Switches & Accessories,True
+1036,894856,872584,Relays & Breakers,True
+1037,894984,872584,Power Supplies,True
+1038,895112,872584,Motors & Generators,True
+1039,895240,872584,Electrical Sockets & Accessories,True
+1040,895368,872584,Wires & Cables ,True
+1041,895496,872584,Transformers,True
+1042,895624,872712,Kitchen Taps,True
+1043,895752,872712,Kitchen Sinks,True
+1044,895880,872712,Kitchen Cabinets,True
+1045,896008,872712,Water Filtration Devices,True
+1046,896136,872712,Kitchen Fixture Accessories,True
+1047,896264,872712,Kitchen Fixture Sets,True
+1048,896392,872840,Smart Home Controls,True
+1049,896520,872840,Temperature Control Systems,True
+1050,896648,872840,Automatic Curtain Control Systems,True
+1051,896776,872840,Smart Motion Sensors,True
+1052,896904,872968,"Heating, Cooling & Ventilation",True
+1053,897032,872968,"Doors, Gates & Windows",True
+1054,897160,872968,Wallpaper,True
+1055,897288,872968,Painting Supplies,True
+1056,897544,872968,Ladders,True
+1057,897672,872968,Trollies,True
+1058,897800,873096,Shower Equipment,True
+1059,897928,873096,Hooks & Bars,True
+1060,898056,873096,Bathroom Sinks,True
+1061,898184,873096,Bathroom Taps,True
+1062,898312,873096,Bidets & Bidet Parts,True
+1063,898440,873096,Toilets & Toilet Parts,True
+1064,898568,873096,Bathroom Mirrors,True
+1065,898696,873096,Bathroom Fixture Accessories,True
+1066,898824,873096,Bathroom Fixture Sets,True
+1067,898952,873224,Security Alarms,True
+1068,899080,873224,Doorbells & Intercoms,True
+1069,899336,873224,Safes,True
+1070,899464,873224,Emergency Kits,True
+1071,899592,873352,Beekeeping Supplies,True
+1072,899720,873352,Plant Care Tools,True
+1073,899976,873352,Garden Décor,True
+1074,900104,873352,Watering & Irrigation,True
+1075,900232,873352,Garden Pots & Planters,True
+1076,900872,900488,Trainers,True
+1077,901000,900488,Flats,True
+1078,901128,900488,Sandals & Flip Flops,True
+1079,901256,900488,Slip-Ons,True
+1080,901384,900488,Mules & Clogs,True
+1081,901512,900616,Flat Shoes,True
+1082,901640,900616,Formal Shoes,True
+1083,901768,900616,Slip-Ons,True
+1084,901896,900616,Mules & Clogs,True
+1085,902024,900744,Shoe Horns & Trees,True
+1086,902152,900744,Shoelaces,True
+1087,902280,900744,Cleaning & Care,True
+1088,903048,902408,Bum Bags & Belt Bags,True
+1089,903176,902408,Tote Bags,True
+1090,903304,902536,Tote Bags,True
+1091,903432,902536,Briefcases,True
+1092,903560,902536,Bum Bags & Belt Bags,True
+1093,903688,902664,Luggage,True
+1094,903816,902664,Travel Organizers,True
+1095,903944,902664,Passport Holders & Covers,True
+1096,904072,902792,Instrument Bags & Cases,True
+1097,904200,902792,Lunch Bags,True
+1098,904328,902792,Cooler Bags,True
+1099,904456,902792,Shopping Bags,True
+1100,904584,902920,Bag Straps & Chains,True
+1101,904712,902920,Bag Hangers,True
+1102,904840,902920,Charms & Twillies,True
+1103,904968,902920,Bag Organizers,True
+1104,905096,902920,Cleaning & Care,True
+1105,905992,905224,Scarves & Shawls,True
+1106,906120,905224,Gloves,True
+1107,906248,905224,Headwear,True
+1108,906376,905224,Belts,True
+1109,906504,905224,Ties & Bowties,True
+1110,906632,905224,Handkerchiefs,True
+1111,906760,905224,Face Covering Masks,True
+1112,906888,905224,Cufflinks,True
+1113,907016,905352,Glasses Cases & Accessories,True
+1114,907144,905480,Unisex Watches,True
+1115,907400,905608,Charms & Pendants,True
+1116,907528,905608,Body Jewellery,True
+1117,907656,905608,Key Chains,True
+1118,907784,905608,Jewellery Sets,True
+1119,908424,905864,Hair Bands & Scrunchies,True
+1120,908552,905864,Hair Clips & Hair Pins,True
+1121,908808,905864,Synthetic Wigs & Extensions,True
+1122,908936,905864,Headpieces & Crowns,True
+1123,909832,909064,Mobile Phone Parts,True
+1124,909960,909064,Selfie Accessories,True
+1125,910088,909064,Mobile Lenses & Flashes,True
+1126,910344,909064,Phone Holders & Mounts,True
+1127,910472,909064,Casting Devices,True
+1128,910600,909064,Walkie Talkies,True
+1129,910728,909064,Power Banks & Batteries,True
+1130,910856,909192,Point & Shoot Cameras,True
+1131,910984,909192,Mirrorless Cameras,True
+1132,911112,909192,Action Cameras,True
+1133,911240,909192,Video Camcorders,True
+1134,911368,909192,Instant Cameras,True
+1135,911496,909192,Film Cameras,True
+1136,911624,909192,DSLRs,True
+1137,911752,909192,Security Cameras & Systems,True
+1138,911880,909192,Camera Lenses,True
+1139,912008,909192,Drones & Accessories,True
+1140,912136,909192,Camera Care ,True
+1141,912264,909320,Microphones,True
+1142,912392,909320,Projectors,True
+1143,912520,909320,Home Cinema Systems,True
+1144,912648,909320,MP3 & MP4 Players,True
+1145,912776,909320,CD & DVD Players,True
+1146,912904,909320,Voice Recorders,True
+1147,913032,909320,Radio & Cassette Players,True
+1148,913160,909320,Amplifiers & Mixers,True
+1149,913288,909320,AV Receivers,True
+1150,913416,909320,Audio & Video Accessories,True
+1151,913544,909448,Home Games Consoles,True
+1152,913672,909448,Handheld Games Consoles,True
+1153,913928,909448,Console Accessories,True
+1154,914056,909576,Fitness Trackers,True
+1155,914184,909576,GPS Trackers,True
+1156,914312,909576,VR Devices,True
+1157,914440,909704,E-book Readers,True
+1158,914568,909704,E-dictionaries,True
+1159,929672,879112,Nappies,True
+1160,930440,929928,Video Surveillance,True
+1161,930568,929928,Alarm Systems & Security,True
+1162,930952,929928,Car Video Players,True
+1163,931208,929928,Car Electrical Appliances,True
+1164,931336,929928,Car Audio,True
+1165,931464,930056,Side Mirror Folding Kits,True
+1166,931592,930056,Car Covers & Shelters,True
+1167,931720,930056,Car Stickers,True
+1168,931848,930056,Window Tints,True
+1169,931976,930056,Window Films & Solar Protection,True
+1170,932232,930056,Car Tax Disc Holders,True
+1171,932360,930056,Reflective Strips,True
+1172,932488,930184,Neck Pillows,True
+1173,932616,930184,Interior Stickers,True
+1174,932744,930184,Rear Racks & Accessories,True
+1175,932872,930184,Interior Mouldings,True
+1176,933000,930184,Car Key Cases,True
+1177,933512,871304,Shelves & Racks,True
+1178,934152,844808,Electric Mops,True
+1179,934280,844808,Clothes & Shoe Dryers,True
+1180,934408,844808,Electronic Mosquito Killers,True
+1181,934536,844168,Coffee Machines & Accessories,True
+1182,934664,844168,Bread Makers,True
+1183,934792,844168,Mixers,True
+1184,934920,844168,Water Filters,True
+1185,935048,844168,Water Coolers & Dispensers,True
+1186,935176,844168,Food Processors,True
+1187,935304,844168,Fryers,True
+1188,935432,844168,Kitchen Appliance Parts,True
+1189,936328,834952,American Football,True
+1190,936584,834952,Cricket,True
+1191,936840,936712,Premier League,True
+1192,936968,936712,Basketball,True
+1193,937096,936712,Cricket,True
+1194,937224,936712,Golf,True
+1195,937352,936712,Gaming,True
+1196,937480,936712,Rugby,True
+1197,937608,936712,Tennis,True
+1198,937864,937736,Trading Cards,True
+1199,937992,937736,Jerseys,True
+1200,938120,937736,Photographs,True
+1201,938248,937736,Balls,True
+1202,938376,937736,Trophies,True
+1203,938504,937736,Figurines,True
+1204,938632,937736,Gloves,True
+1205,938760,937736,Hats,True
+1206,938888,937736,Shoes,True
+1207,939016,937736,Books,True
+1208,939144,937736,Golf Clubs,True
+1209,939272,937736,Flags & Banners,True
+1210,939400,937736,Prints & Posters,True
+1211,939528,937736,Magazines,True
+1212,939784,835336,Resistance Bands,True
+1213,939912,835336,Roller Skating,True
+1214,940040,835336,Scooters & Ride-ons,True
+1215,940168,834824,Sports Water Bottles,True
+1216,941064,940296,Code Readers & Scanners,True
+1217,941192,940296,Diagnostic Tools,True
+1218,941320,940296,Sheet Metal Tools,True
+1219,941448,940296,Car Battery Repair Tools,True
+1220,941576,940296,Car Inspection Tools,True
+1221,941704,940296,Engine & Transmission Repair Tools,True
+1222,941832,940296,Tyre Repair & Fitting Tools,True
+1223,941960,940296,Assembly & Disassembly Tools,True
+1224,942088,940296,Car Body Repair Tools,True
+1225,942216,940424,Decorative Lights,True
+1226,944264,940680,Transportation & Storage,True
+1227,944648,940808,Polishing Machines & Accessories,True
+1228,944776,940808,Paint & Window Repair Tools,True
+1229,944904,940808,Interior Care,True
+1230,945032,940808,Car Wash Accessories,True
+1231,945160,940808,Water Guns & Snow Foam Lances,True
+1232,945288,940808,Cleaning & Care Fluids,True
+1233,945416,940808,Window Repair,True
+1234,945544,940808,Paint Care,True
+1235,945672,940808,Engine Care,True
+1236,945800,940808,Car Washers,True
+1237,946312,940936,Protective Gear,True
