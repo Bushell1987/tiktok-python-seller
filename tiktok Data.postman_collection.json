@@ -1,0 +1,1690 @@
+{
+	"info": {
+		"_postman_id": "1bb3045e-20a8-4b64-80e6-333a48fc260c",
+		"name": "tiktok Data",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "orders_api",
+			"item": [
+				{
+					"name": "GetOrderList",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"// Replace secret with your own\r",
+									"var secret = \"\"\r",
+									"\r",
+									"function objKeySort(obj) {\r",
+									"    var newKey = Object.keys(obj).sort()\r",
+									"    var newObj = {}\r",
+									"    for (var i = 0; i < newKey.length; i++) {\r",
+									"        newObj[newKey[i]] = obj[newKey[i]]\r",
+									"    }\r",
+									"    return newObj\r",
+									"}\r",
+									"\r",
+									"function getEnvVar(k) {\r",
+									"    var v = pm.variables.get(k)\r",
+									"    if (v != null) {\r",
+									"        return v\r",
+									"    }\r",
+									"    v = pm.environment.get(k)\r",
+									"    if (v != null) {\r",
+									"        return v\r",
+									"    }\r",
+									"    v = pm.globals.get(k)\r",
+									"    if (v != null) {\r",
+									"        return v\r",
+									"    }\r",
+									"    return null\r",
+									"}\r",
+									"\r",
+									"var ts = Date.parse(new Date()) / 1000\r",
+									"pm.variables.set(\"timestamp\", ts)\r",
+									"\r",
+									"calSign = function(secret) {\r",
+									"    var ts = getEnvVar(\"timestamp\")\r",
+									"    console.log(ts);\r",
+									"    var queryParam = pm.request.url.query.members\r",
+									"    var param = {}\r",
+									"    for (var item in queryParam) {\r",
+									"        if (queryParam[item].key == \"timestamp\") {\r",
+									"            v = ts\r",
+									"        } else {\r",
+									"            var v = queryParam[item].value\r",
+									"            if (v == null || v == \"{{\" + queryParam[item].key + \"}}\") {\r",
+									"                v = getEnvVar(queryParam[item].key)\r",
+									"            }\r",
+									"        }\r",
+									"        param[queryParam[item].key] = v\r",
+									"    }\r",
+									"\r",
+									"    delete param[\"sign\"];\r",
+									"    delete param[\"access_token\"]\r",
+									"    var sortedObj = objKeySort(param)\r",
+									"    var signstring = secret + pm.request.url.getPath()\r",
+									"    for (var key in sortedObj) {\r",
+									"        signstring = signstring + key + sortedObj[key]\r",
+									"    }\r",
+									"    signstring = signstring + secret\r",
+									"    console.log(signstring)\r",
+									"    sign = CryptoJS.HmacSHA256(signstring, secret).toString()\r",
+									"    return sign\r",
+									"}\r",
+									"\r",
+									"var sign = calSign(secret)\r",
+									"console.log(sign)\r",
+									"pm.variables.set(\"sign\", sign)"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n    \"order_id_list\":[\"\",\"\"]\r\n}"
+						},
+						"url": {
+							"raw": "https://open-api.tiktokglobalshop.com/api/orders/detail/query?timestamp={{timestamp}}&app_key={{app_key}}&sign={{sign}}&access_token={{access_token}}",
+							"protocol": "https",
+							"host": [
+								"open-api",
+								"tiktokglobalshop",
+								"com"
+							],
+							"path": [
+								"api",
+								"orders",
+								"detail",
+								"query"
+							],
+							"query": [
+								{
+									"key": "timestamp",
+									"value": "{{timestamp}}"
+								},
+								{
+									"key": "app_key",
+									"value": "{{app_key}}"
+								},
+								{
+									"key": "sign",
+									"value": "{{sign}}"
+								},
+								{
+									"key": "access_token",
+									"value": "{{access_token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "shipOrder",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"// Replace secret with your own\r",
+									"var secret = \"\"\r",
+									"\r",
+									"function objKeySort(obj) {\r",
+									"    var newKey = Object.keys(obj).sort()\r",
+									"    var newObj = {}\r",
+									"    for (var i = 0; i < newKey.length; i++) {\r",
+									"        newObj[newKey[i]] = obj[newKey[i]]\r",
+									"    }\r",
+									"    return newObj\r",
+									"}\r",
+									"\r",
+									"function getEnvVar(k) {\r",
+									"    var v = pm.variables.get(k)\r",
+									"    if (v != null) {\r",
+									"        return v\r",
+									"    }\r",
+									"    v = pm.environment.get(k)\r",
+									"    if (v != null) {\r",
+									"        return v\r",
+									"    }\r",
+									"    v = pm.globals.get(k)\r",
+									"    if (v != null) {\r",
+									"        return v\r",
+									"    }\r",
+									"    return null\r",
+									"}\r",
+									"\r",
+									"var ts = Date.parse(new Date()) / 1000\r",
+									"pm.variables.set(\"timestamp\", ts)\r",
+									"\r",
+									"calSign = function(secret) {\r",
+									"    var ts = getEnvVar(\"timestamp\")\r",
+									"    console.log(ts);\r",
+									"    var queryParam = pm.request.url.query.members\r",
+									"    var param = {}\r",
+									"    for (var item in queryParam) {\r",
+									"        if (queryParam[item].key == \"timestamp\") {\r",
+									"            v = ts\r",
+									"        } else {\r",
+									"            var v = queryParam[item].value\r",
+									"            if (v == null || v == \"{{\" + queryParam[item].key + \"}}\") {\r",
+									"                v = getEnvVar(queryParam[item].key)\r",
+									"            }\r",
+									"        }\r",
+									"        param[queryParam[item].key] = v\r",
+									"    }\r",
+									"\r",
+									"    delete param[\"sign\"];\r",
+									"    delete param[\"access_token\"]\r",
+									"    var sortedObj = objKeySort(param)\r",
+									"    var signstring = secret + pm.request.url.getPath()\r",
+									"    for (var key in sortedObj) {\r",
+									"        signstring = signstring + key + sortedObj[key]\r",
+									"    }\r",
+									"    signstring = signstring + secret\r",
+									"    console.log(signstring)\r",
+									"    sign = CryptoJS.HmacSHA256(signstring, secret).toString()\r",
+									"    return sign\r",
+									"}\r",
+									"\r",
+									"var sign = calSign(secret)\r",
+									"console.log(sign)\r",
+									"pm.variables.set(\"sign\", sign)"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/api/order/rts?timestamp={{timestamp}}&app_key={{app_key}}&sign={{sign}}&access_token={{access_token}}&order_id=&tracking_number=&shipping_provider_id=",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"order",
+								"rts"
+							],
+							"query": [
+								{
+									"key": "timestamp",
+									"value": "{{timestamp}}"
+								},
+								{
+									"key": "app_key",
+									"value": "{{app_key}}"
+								},
+								{
+									"key": "sign",
+									"value": "{{sign}}"
+								},
+								{
+									"key": "access_token",
+									"value": "{{access_token}}"
+								},
+								{
+									"key": "order_id",
+									"value": ""
+								},
+								{
+									"key": "tracking_number",
+									"value": ""
+								},
+								{
+									"key": "shipping_provider_id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetOrderDetail",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"// Replace secret with your own\r",
+									"var secret = \"\"\r",
+									"\r",
+									"function objKeySort(obj) {\r",
+									"    var newKey = Object.keys(obj).sort()\r",
+									"    var newObj = {}\r",
+									"    for (var i = 0; i < newKey.length; i++) {\r",
+									"        newObj[newKey[i]] = obj[newKey[i]]\r",
+									"    }\r",
+									"    return newObj\r",
+									"}\r",
+									"\r",
+									"function getEnvVar(k) {\r",
+									"    var v = pm.variables.get(k)\r",
+									"    if (v != null) {\r",
+									"        return v\r",
+									"    }\r",
+									"    v = pm.environment.get(k)\r",
+									"    if (v != null) {\r",
+									"        return v\r",
+									"    }\r",
+									"    v = pm.globals.get(k)\r",
+									"    if (v != null) {\r",
+									"        return v\r",
+									"    }\r",
+									"    return null\r",
+									"}\r",
+									"\r",
+									"var ts = Date.parse(new Date()) / 1000\r",
+									"pm.variables.set(\"timestamp\", ts)\r",
+									"\r",
+									"calSign = function(secret) {\r",
+									"    var ts = getEnvVar(\"timestamp\")\r",
+									"    console.log(ts);\r",
+									"    var queryParam = pm.request.url.query.members\r",
+									"    var param = {}\r",
+									"    for (var item in queryParam) {\r",
+									"        if (queryParam[item].key == \"timestamp\") {\r",
+									"            v = ts\r",
+									"        } else {\r",
+									"            var v = queryParam[item].value\r",
+									"            if (v == null || v == \"{{\" + queryParam[item].key + \"}}\") {\r",
+									"                v = getEnvVar(queryParam[item].key)\r",
+									"            }\r",
+									"        }\r",
+									"        param[queryParam[item].key] = v\r",
+									"    }\r",
+									"\r",
+									"    delete param[\"sign\"];\r",
+									"    delete param[\"access_token\"]\r",
+									"    var sortedObj = objKeySort(param)\r",
+									"    var signstring = secret + pm.request.url.getPath()\r",
+									"    for (var key in sortedObj) {\r",
+									"        signstring = signstring + key + sortedObj[key]\r",
+									"    }\r",
+									"    signstring = signstring + secret\r",
+									"    console.log(signstring)\r",
+									"    sign = CryptoJS.HmacSHA256(signstring, secret).toString()\r",
+									"    return sign\r",
+									"}\r",
+									"\r",
+									"var sign = calSign(secret)\r",
+									"console.log(sign)\r",
+									"pm.variables.set(\"sign\", sign)"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/orders/search?timestamp={{timestamp}}&app_key={{app_key}}&sign={{sign}}&access_token={{access_token}}&page_size=2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"orders",
+								"search"
+							],
+							"query": [
+								{
+									"key": "timestamp",
+									"value": "{{timestamp}}"
+								},
+								{
+									"key": "app_key",
+									"value": "{{app_key}}"
+								},
+								{
+									"key": "sign",
+									"value": "{{sign}}"
+								},
+								{
+									"key": "access_token",
+									"value": "{{access_token}}"
+								},
+								{
+									"key": "page_size",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_authorized_shop",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"// Replace secret with your own\r",
+									"var secret = \"\"\r",
+									"\r",
+									"function objKeySort(obj) {\r",
+									"    var newKey = Object.keys(obj).sort()\r",
+									"    var newObj = {}\r",
+									"    for (var i = 0; i < newKey.length; i++) {\r",
+									"        newObj[newKey[i]] = obj[newKey[i]]\r",
+									"    }\r",
+									"    return newObj\r",
+									"}\r",
+									"\r",
+									"function getEnvVar(k) {\r",
+									"    var v = pm.variables.get(k)\r",
+									"    if (v != null) {\r",
+									"        return v\r",
+									"    }\r",
+									"    v = pm.environment.get(k)\r",
+									"    if (v != null) {\r",
+									"        return v\r",
+									"    }\r",
+									"    v = pm.globals.get(k)\r",
+									"    if (v != null) {\r",
+									"        return v\r",
+									"    }\r",
+									"    return null\r",
+									"}\r",
+									"\r",
+									"var ts = Date.parse(new Date()) / 1000\r",
+									"pm.variables.set(\"timestamp\", ts)\r",
+									"\r",
+									"calSign = function(secret) {\r",
+									"    var ts = getEnvVar(\"timestamp\")\r",
+									"    console.log(ts);\r",
+									"    var queryParam = pm.request.url.query.members\r",
+									"    var param = {}\r",
+									"    for (var item in queryParam) {\r",
+									"        if (queryParam[item].key == \"timestamp\") {\r",
+									"            v = ts\r",
+									"        } else {\r",
+									"            var v = queryParam[item].value\r",
+									"            if (v == null || v == \"{{\" + queryParam[item].key + \"}}\") {\r",
+									"                v = getEnvVar(queryParam[item].key)\r",
+									"            }\r",
+									"        }\r",
+									"        param[queryParam[item].key] = v\r",
+									"    }\r",
+									"\r",
+									"    delete param[\"sign\"];\r",
+									"    delete param[\"access_token\"]\r",
+									"    var sortedObj = objKeySort(param)\r",
+									"    var signstring = secret + pm.request.url.getPath()\r",
+									"    for (var key in sortedObj) {\r",
+									"        signstring = signstring + key + sortedObj[key]\r",
+									"    }\r",
+									"    signstring = signstring + secret\r",
+									"    console.log(signstring)\r",
+									"    sign = CryptoJS.HmacSHA256(signstring, secret).toString()\r",
+									"    return sign\r",
+									"}\r",
+									"\r",
+									"var sign = calSign(secret)\r",
+									"pm.variables.set(\"sign\", sign)"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/shop/get_authorized_shop?app_key={{app_key}}&access_token={{access_token}}&sign={{sign}}&timestamp={{timestamp}}&shop_id=",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"shop",
+								"get_authorized_shop"
+							],
+							"query": [
+								{
+									"key": "app_key",
+									"value": "{{app_key}}"
+								},
+								{
+									"key": "access_token",
+									"value": "{{access_token}}"
+								},
+								{
+									"key": "sign",
+									"value": "{{sign}}"
+								},
+								{
+									"key": "timestamp",
+									"value": "{{timestamp}}"
+								},
+								{
+									"key": "shop_id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "1. auth_seller",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/oauth/authorize?app_key={{app_key}}&state=",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"oauth",
+								"authorize"
+							],
+							"query": [
+								{
+									"key": "app_key",
+									"value": "{{app_key}}"
+								},
+								{
+									"key": "state",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2. auth_code",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/token/getAccessToken?app_key={{app_key}}&app_secret={{secret}}&auth_code={{auth_code}}&grant_type=authorized_code",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"token",
+								"getAccessToken"
+							],
+							"query": [
+								{
+									"key": "app_key",
+									"value": "{{app_key}}"
+								},
+								{
+									"key": "app_secret",
+									"value": "{{secret}}"
+								},
+								{
+									"key": "auth_code",
+									"value": "{{auth_code}}"
+								},
+								{
+									"key": "grant_type",
+									"value": "authorized_code"
+								}
+							]
+						},
+						"description": "Get auth code"
+					},
+					"response": []
+				},
+				{
+					"name": "3. refresh_token",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"// Replace secret with your own\r",
+									"var secret = \"\"\r",
+									"\r",
+									"function objKeySort(obj) {\r",
+									"    var newKey = Object.keys(obj).sort()\r",
+									"    var newObj = {}\r",
+									"    for (var i = 0; i < newKey.length; i++) {\r",
+									"        newObj[newKey[i]] = obj[newKey[i]]\r",
+									"    }\r",
+									"    return newObj\r",
+									"}\r",
+									"\r",
+									"function getEnvVar(k) {\r",
+									"    var v = pm.variables.get(k)\r",
+									"    if (v != null) {\r",
+									"        return v\r",
+									"    }\r",
+									"    v = pm.environment.get(k)\r",
+									"    if (v != null) {\r",
+									"        return v\r",
+									"    }\r",
+									"    v = pm.globals.get(k)\r",
+									"    if (v != null) {\r",
+									"        return v\r",
+									"    }\r",
+									"    return null\r",
+									"}\r",
+									"\r",
+									"var ts = Date.parse(new Date()) / 1000\r",
+									"pm.variables.set(\"timestamp\", ts)\r",
+									"\r",
+									"calSign = function(secret) {\r",
+									"    var ts = getEnvVar(\"timestamp\")\r",
+									"    console.log(ts);\r",
+									"    var queryParam = pm.request.url.query.members\r",
+									"    var param = {}\r",
+									"    for (var item in queryParam) {\r",
+									"        if (queryParam[item].key == \"timestamp\") {\r",
+									"            v = ts\r",
+									"        } else {\r",
+									"            var v = queryParam[item].value\r",
+									"            if (v == null || v == \"{{\" + queryParam[item].key + \"}}\") {\r",
+									"                v = getEnvVar(queryParam[item].key)\r",
+									"            }\r",
+									"        }\r",
+									"        param[queryParam[item].key] = v\r",
+									"    }\r",
+									"\r",
+									"    delete param[\"sign\"];\r",
+									"    delete param[\"access_token\"]\r",
+									"    var sortedObj = objKeySort(param)\r",
+									"    var signstring = secret + pm.request.url.getPath()\r",
+									"    for (var key in sortedObj) {\r",
+									"        signstring = signstring + key + sortedObj[key]\r",
+									"    }\r",
+									"    signstring = signstring + secret\r",
+									"    console.log(signstring)\r",
+									"    sign = CryptoJS.HmacSHA256(signstring, secret).toString()\r",
+									"    return sign\r",
+									"}\r",
+									"\r",
+									"var sign = calSign(secret)\r",
+									"console.log(sign)\r",
+									"pm.variables.set(\"sign\", sign)"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://auth.tiktok-shops.com/api/token/refreshToken?app_key={{app_key}}&app_secret={{app_secret}}&refresh_token={{refresh_token}}&grant_type=refresh_token",
+							"protocol": "https",
+							"host": [
+								"auth",
+								"tiktok-shops",
+								"com"
+							],
+							"path": [
+								"api",
+								"token",
+								"refreshToken"
+							],
+							"query": [
+								{
+									"key": "app_key",
+									"value": "{{app_key}}"
+								},
+								{
+									"key": "app_secret",
+									"value": "{{app_secret}}"
+								},
+								{
+									"key": "refresh_token",
+									"value": "{{refresh_token}}"
+								},
+								{
+									"key": "grant_type",
+									"value": "refresh_token"
+								}
+							]
+						},
+						"description": "Get auth code"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "products_api",
+			"item": [
+				{
+					"name": "Retrieve Product",
+					"item": [
+						{
+							"name": "GetProductDetail",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											"// Replace secret with your own\r",
+											"var secret = \"\"\r",
+											"\r",
+											"function objKeySort(obj) {\r",
+											"    var newKey = Object.keys(obj).sort()\r",
+											"    var newObj = {}\r",
+											"    for (var i = 0; i < newKey.length; i++) {\r",
+											"        newObj[newKey[i]] = obj[newKey[i]]\r",
+											"    }\r",
+											"    return newObj\r",
+											"}\r",
+											"\r",
+											"function getEnvVar(k) {\r",
+											"    var v = pm.variables.get(k)\r",
+											"    if (v != null) {\r",
+											"        return v\r",
+											"    }\r",
+											"    v = pm.environment.get(k)\r",
+											"    if (v != null) {\r",
+											"        return v\r",
+											"    }\r",
+											"    v = pm.globals.get(k)\r",
+											"    if (v != null) {\r",
+											"        return v\r",
+											"    }\r",
+											"    return null\r",
+											"}\r",
+											"\r",
+											"var ts = Date.parse(new Date()) / 1000\r",
+											"pm.variables.set(\"timestamp\", ts)\r",
+											"\r",
+											"calSign = function(secret) {\r",
+											"    var ts = getEnvVar(\"timestamp\")\r",
+											"    console.log(ts);\r",
+											"    var queryParam = pm.request.url.query.members\r",
+											"    var param = {}\r",
+											"    for (var item in queryParam) {\r",
+											"        if (queryParam[item].key == \"timestamp\") {\r",
+											"            v = ts\r",
+											"        } else {\r",
+											"            var v = queryParam[item].value\r",
+											"            if (v == null || v == \"{{\" + queryParam[item].key + \"}}\") {\r",
+											"                v = getEnvVar(queryParam[item].key)\r",
+											"            }\r",
+											"        }\r",
+											"        param[queryParam[item].key] = v\r",
+											"    }\r",
+											"\r",
+											"    delete param[\"sign\"];\r",
+											"    delete param[\"access_token\"]\r",
+											"    var sortedObj = objKeySort(param)\r",
+											"    var signstring = secret + pm.request.url.getPath()\r",
+											"    for (var key in sortedObj) {\r",
+											"        signstring = signstring + key + sortedObj[key]\r",
+											"    }\r",
+											"    signstring = signstring + secret\r",
+											"    console.log(signstring)\r",
+											"    sign = CryptoJS.HmacSHA256(signstring, secret).toString()\r",
+											"    return sign\r",
+											"}\r",
+											"\r",
+											"var sign = calSign(secret)\r",
+											"console.log(sign)\r",
+											"pm.variables.set(\"sign\", sign)"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://open-api.tiktokglobalshop.com/api/products/details?timestamp={{timestamp}}&app_key={{app_key}}&sign={{sign}}&access_token={{access_token}}&product_id=25",
+									"protocol": "https",
+									"host": [
+										"open-api",
+										"tiktokglobalshop",
+										"com"
+									],
+									"path": [
+										"api",
+										"products",
+										"details"
+									],
+									"query": [
+										{
+											"key": "timestamp",
+											"value": "{{timestamp}}"
+										},
+										{
+											"key": "app_key",
+											"value": "{{app_key}}"
+										},
+										{
+											"key": "sign",
+											"value": "{{sign}}"
+										},
+										{
+											"key": "access_token",
+											"value": "{{access_token}}"
+										},
+										{
+											"key": "product_id",
+											"value": "25"
+										},
+										{
+											"key": "page_number",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "search_status",
+											"value": "4",
+											"disabled": true
+										},
+										{
+											"key": "",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetProductList",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											"// Replace secret with your own\r",
+											"var secret = \"\"\r",
+											"\r",
+											"function objKeySort(obj) {\r",
+											"    var newKey = Object.keys(obj).sort()\r",
+											"    var newObj = {}\r",
+											"    for (var i = 0; i < newKey.length; i++) {\r",
+											"        newObj[newKey[i]] = obj[newKey[i]]\r",
+											"    }\r",
+											"    return newObj\r",
+											"}\r",
+											"\r",
+											"function getEnvVar(k) {\r",
+											"    var v = pm.variables.get(k)\r",
+											"    if (v != null) {\r",
+											"        return v\r",
+											"    }\r",
+											"    v = pm.environment.get(k)\r",
+											"    if (v != null) {\r",
+											"        return v\r",
+											"    }\r",
+											"    v = pm.globals.get(k)\r",
+											"    if (v != null) {\r",
+											"        return v\r",
+											"    }\r",
+											"    return null\r",
+											"}\r",
+											"\r",
+											"var ts = Date.parse(new Date()) / 1000\r",
+											"pm.variables.set(\"timestamp\", ts)\r",
+											"\r",
+											"calSign = function(secret) {\r",
+											"    var ts = getEnvVar(\"timestamp\")\r",
+											"    console.log(ts);\r",
+											"    var queryParam = pm.request.url.query.members\r",
+											"    var param = {}\r",
+											"    for (var item in queryParam) {\r",
+											"        if (queryParam[item].key == \"timestamp\") {\r",
+											"            v = ts\r",
+											"        } else {\r",
+											"            var v = queryParam[item].value\r",
+											"            if (v == null || v == \"{{\" + queryParam[item].key + \"}}\") {\r",
+											"                v = getEnvVar(queryParam[item].key)\r",
+											"            }\r",
+											"        }\r",
+											"        param[queryParam[item].key] = v\r",
+											"    }\r",
+											"\r",
+											"    delete param[\"sign\"];\r",
+											"    delete param[\"access_token\"]\r",
+											"    var sortedObj = objKeySort(param)\r",
+											"    var signstring = secret + pm.request.url.getPath()\r",
+											"    for (var key in sortedObj) {\r",
+											"        signstring = signstring + key + sortedObj[key]\r",
+											"    }\r",
+											"    signstring = signstring + secret\r",
+											"    console.log(signstring)\r",
+											"    sign = CryptoJS.HmacSHA256(signstring, secret).toString()\r",
+											"    return sign\r",
+											"}\r",
+											"\r",
+											"var sign = calSign(secret)\r",
+											"console.log(sign)\r",
+											"pm.variables.set(\"sign\", sign)"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://open-api.tiktokglobalshop.com/api/products/search?timestamp={{timestamp}}&app_key={{app_key}}&sign={{sign}}&access_token={{access_token}}&page_size=25&page_number=1",
+									"protocol": "https",
+									"host": [
+										"open-api",
+										"tiktokglobalshop",
+										"com"
+									],
+									"path": [
+										"api",
+										"products",
+										"search"
+									],
+									"query": [
+										{
+											"key": "timestamp",
+											"value": "{{timestamp}}"
+										},
+										{
+											"key": "app_key",
+											"value": "{{app_key}}"
+										},
+										{
+											"key": "sign",
+											"value": "{{sign}}"
+										},
+										{
+											"key": "access_token",
+											"value": "{{access_token}}"
+										},
+										{
+											"key": "page_size",
+											"value": "25"
+										},
+										{
+											"key": "page_number",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "upload_img",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "GetWarehouseID",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "create_product",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"// Replace secret with your own",
+									"var secret = \"\"",
+									"",
+									"function objKeySort(obj) {",
+									"    var newKey = Object.keys(obj).sort()",
+									"    var newObj = {}",
+									"    for (var i = 0; i < newKey.length; i++) {",
+									"        newObj[newKey[i]] = obj[newKey[i]]",
+									"    }",
+									"    return newObj",
+									"}",
+									"",
+									"function getEnvVar(k) {",
+									"    var v = pm.variables.get(k)",
+									"    if (v != null) {",
+									"        return v",
+									"    }",
+									"    v = pm.environment.get(k)",
+									"    if (v != null) {",
+									"        return v",
+									"    }",
+									"    v = pm.globals.get(k)",
+									"    if (v != null) {",
+									"        return v",
+									"    }",
+									"    return null",
+									"}",
+									"",
+									"var ts = Date.parse(new Date()) / 1000",
+									"pm.variables.set(\"timestamp\", ts)",
+									"",
+									"calSign = function(secret) {",
+									"    var ts = getEnvVar(\"timestamp\")",
+									"    console.log(ts);",
+									"    var queryParam = pm.request.url.query.members",
+									"    var param = {}",
+									"    for (var item in queryParam) {",
+									"        if (queryParam[item].key == \"timestamp\") {",
+									"            v = ts",
+									"        } else {",
+									"            var v = queryParam[item].value",
+									"            if (v == null || v == \"{{\" + queryParam[item].key + \"}}\") {",
+									"                v = getEnvVar(queryParam[item].key)",
+									"            }",
+									"        }",
+									"        param[queryParam[item].key] = v",
+									"    }",
+									"",
+									"    delete param[\"sign\"];",
+									"    delete param[\"access_token\"]",
+									"    var sortedObj = objKeySort(param)",
+									"    var signstring = secret + pm.request.url.getPath()",
+									"    for (var key in sortedObj) {",
+									"        signstring = signstring + key + sortedObj[key]",
+									"    }",
+									"    signstring = signstring + secret",
+									"    console.log(signstring)",
+									"    sign = CryptoJS.HmacSHA256(signstring, secret).toString()",
+									"    return sign",
+									"}",
+									"",
+									"var sign = calSign(secret)",
+									"console.log(sign)",
+									"pm.variables.set(\"sign\", sign)"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"product_name\": \"aaaaaa\",\n    \"description\": \"<ul><li>It is recommended to avoid using Chinese because the copy will be displayed to local users</li></ul><img src=\\\"https://p19-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/8de4c52c078042589e427c681ca10d0e~tplv-o3syd03w52-origin-jpeg.jpeg?\\\" width=\\\"1920\\\" height=\\\"1080\\\">\",\n    \"category_id\": \"\",\n    \"brand_id\": \"2222222\",\n    \"images\": [\n        {\n            \"id\": \"fadfasdf\"\n        },\n        {\n            \"id\": \"asdfasdfasdf\"\n        },\n        {\n            \"id\": \"asdfasdf\"\n        },\n        {\n            \"id\": \"asdfasdf\"\n        },\n        {\n            \"id\": \"asdfasdf\"\n        }\n    ],\n    \"warranty_period\": 1,\n    \"warranty_policy\": \"N/A\",\n    \"package_length\": 10,\n    \"package_width\": 10,\n    \"package_height\": 10,\n    \"package_weight\": \"20\",\n    \"product_certifications\": [\n        {\n            \"id\": \"1111111\",\n            \"files\": [\n                {\n                    \"id\": \"dfgsdfgsdfgsdfg\",\n                    \"name\": \"aaaa.pdf\",\n                    \"type\": \"PDF\"\n                },\n                {\n                    \"id\": \"asdfasdfasdfasdf\",\n                    \"name\": \"bbb.pdf\",\n                    \"type\": \"PDF\"\n                }\n            ],\n            \"images\": [\n                {\n                    \"id\": \"sdafasdfasdfasdfsd\"\n                }\n            ]\n        }\n    ],\n    \"is_cod_open\": false,\n    \"skus\": [\n        {\n            \"sales_attributes\": [\n                {\n                    \"attribute_id\": \"11111\",\n                    \"custom_value\": \"yellow\"\n                },\n                {\n                    \"attribute_id\": \"222222\",\n                    \"custom_value\": \"small\",\n                    \"sku_img\": {\n                        \"id\": \"asdfasdfasdfasdf\"\n                    }\n                }\n            ],\n            \"stock_infos\": [\n                {\n                    \"warehouse_id\": \"3333333\",\n                    \"available_stock\": 200\n                }\n            ],\n            \"seller_sku\": \"test1\",\n            \"original_price\": \"100\"\n        },\n        {\n            \"sales_attributes\": [\n                {\n                    \"attribute_id\": \"100000\",\n                    \"custom_value\": \"red\"\n                },\n                {\n                    \"attribute_id\": \"100007\",\n                    \"custom_value\": \"big\",\n                    \"sku_img\": {\n                        \"id\": \"asdfasdfasdfasdfsda\"\n                    }\n                }\n            ],\n            \"stock_infos\": [\n                {\n                    \"warehouse_id\": \"4444444\",\n                    \"available_stock\": 0\n                }\n            ],\n            \"seller_sku\": \"test2\",\n            \"original_price\": \"100\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://open-api.tiktokglobalshop.com/api/products?access_token={{access_token}}&sign={{sign}}&app_key={{app_key}}&timestamp={{timestamp}}",
+							"protocol": "https",
+							"host": [
+								"open-api",
+								"tiktokglobalshop",
+								"com"
+							],
+							"path": [
+								"api",
+								"products"
+							],
+							"query": [
+								{
+									"key": "access_token",
+									"value": "{{access_token}}"
+								},
+								{
+									"key": "sign",
+									"value": "{{sign}}"
+								},
+								{
+									"key": "app_key",
+									"value": "{{app_key}}"
+								},
+								{
+									"key": "timestamp",
+									"value": "{{timestamp}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_categories",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"var secret = \"\"",
+									"",
+									"function objKeySort(obj) {",
+									"    var newKey = Object.keys(obj).sort()",
+									"    var newObj = {}",
+									"    for (var i = 0; i < newKey.length; i++) {",
+									"        newObj[newKey[i]] = obj[newKey[i]]",
+									"    }",
+									"    return newObj",
+									"}",
+									"",
+									"function getEnvVar(k) {",
+									"    var v = pm.variables.get(k)",
+									"    if (v != null) {",
+									"        return v",
+									"    }",
+									"    v = pm.environment.get(k)",
+									"    if (v != null) {",
+									"        return v",
+									"    }",
+									"    v = pm.globals.get(k)",
+									"    if (v != null) {",
+									"        return v",
+									"    }",
+									"    return null",
+									"}",
+									"",
+									"var ts = Date.parse(new Date()) / 1000",
+									"pm.variables.set(\"timestamp\", ts)",
+									"",
+									"calSign = function(secret) {",
+									"    var ts = getEnvVar(\"timestamp\")",
+									"    console.log(ts);",
+									"    var queryParam = pm.request.url.query.members",
+									"    var param = {}",
+									"    for (var item in queryParam) {",
+									"        if (queryParam[item].key == \"timestamp\") {",
+									"            v = ts",
+									"        } else {",
+									"            var v = queryParam[item].value",
+									"            if (v == null || v == \"{{\" + queryParam[item].key + \"}}\") {",
+									"                v = getEnvVar(queryParam[item].key)",
+									"            }",
+									"        }",
+									"        param[queryParam[item].key] = v",
+									"    }",
+									"",
+									"    delete param[\"sign\"];",
+									"    delete param[\"access_token\"]",
+									"    var sortedObj = objKeySort(param)",
+									"    var signstring = secret + pm.request.url.getPath()",
+									"    console.log(signstring)",
+									"    for (var key in sortedObj) {",
+									"        signstring = signstring + key + sortedObj[key]",
+									"    }",
+									"    signstring = signstring + secret",
+									"    console.log(\"sign string\", signstring)",
+									"    sign = CryptoJS.HmacSHA256(signstring, secret).toString()",
+									"    return sign",
+									"}",
+									"",
+									"var sign = calSign(secret)",
+									"console.log(sign)",
+									"pm.variables.set(\"sign\", sign)"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://open-api.tiktokglobalshop.com/api/products/categories?access_token={{access_token}}&sign={{sign}}&app_key={{app_key}}&timestamp={{timestamp}}",
+							"protocol": "https",
+							"host": [
+								"open-api",
+								"tiktokglobalshop",
+								"com"
+							],
+							"path": [
+								"api",
+								"products",
+								"categories"
+							],
+							"query": [
+								{
+									"key": "access_token",
+									"value": "{{access_token}}"
+								},
+								{
+									"key": "sign",
+									"value": "{{sign}}"
+								},
+								{
+									"key": "app_key",
+									"value": "{{app_key}}"
+								},
+								{
+									"key": "timestamp",
+									"value": "{{timestamp}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Stock",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"product_id\": \"123123123\",\n    \"skus\": [\n        {\n            \"id\": \"123123123\",\n            \"stock_infos\": [\n                {\n                    \"available_stock\": 50,\n                    \"warehouse_id\": \"123123123123\"\n                }\n            ]\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "logistics_api",
+			"item": [
+				{
+					"name": "GetShippingInfo",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"// Replace secret with your own\r",
+									"var secret = \"\"\r",
+									"\r",
+									"function objKeySort(obj) {\r",
+									"    var newKey = Object.keys(obj).sort()\r",
+									"    var newObj = {}\r",
+									"    for (var i = 0; i < newKey.length; i++) {\r",
+									"        newObj[newKey[i]] = obj[newKey[i]]\r",
+									"    }\r",
+									"    return newObj\r",
+									"}\r",
+									"\r",
+									"function getEnvVar(k) {\r",
+									"    var v = pm.variables.get(k)\r",
+									"    if (v != null) {\r",
+									"        return v\r",
+									"    }\r",
+									"    v = pm.environment.get(k)\r",
+									"    if (v != null) {\r",
+									"        return v\r",
+									"    }\r",
+									"    v = pm.globals.get(k)\r",
+									"    if (v != null) {\r",
+									"        return v\r",
+									"    }\r",
+									"    return null\r",
+									"}\r",
+									"\r",
+									"var ts = Date.parse(new Date()) / 1000\r",
+									"pm.variables.set(\"timestamp\", ts)\r",
+									"\r",
+									"calSign = function(secret) {\r",
+									"    var ts = getEnvVar(\"timestamp\")\r",
+									"    console.log(ts);\r",
+									"    var queryParam = pm.request.url.query.members\r",
+									"    var param = {}\r",
+									"    for (var item in queryParam) {\r",
+									"        if (queryParam[item].key == \"timestamp\") {\r",
+									"            v = ts\r",
+									"        } else {\r",
+									"            var v = queryParam[item].value\r",
+									"            if (v == null || v == \"{{\" + queryParam[item].key + \"}}\") {\r",
+									"                v = getEnvVar(queryParam[item].key)\r",
+									"            }\r",
+									"        }\r",
+									"        param[queryParam[item].key] = v\r",
+									"    }\r",
+									"\r",
+									"    delete param[\"sign\"];\r",
+									"    delete param[\"access_token\"]\r",
+									"    var sortedObj = objKeySort(param)\r",
+									"    var signstring = secret + pm.request.url.getPath()\r",
+									"    for (var key in sortedObj) {\r",
+									"        signstring = signstring + key + sortedObj[key]\r",
+									"    }\r",
+									"    signstring = signstring + secret\r",
+									"    console.log(signstring)\r",
+									"    sign = CryptoJS.HmacSHA256(signstring, secret).toString()\r",
+									"    return sign\r",
+									"}\r",
+									"\r",
+									"var sign = calSign(secret)\r",
+									"console.log(sign)\r",
+									"pm.variables.set(\"sign\", sign)"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n    \"order_id_list\":[\"\",\"\"]\r\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/logistics/ship/get?timestamp={{timestamp}}&app_key={{app_key}}&sign={{sign}}&access_token={{access_token}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"logistics",
+								"ship",
+								"get"
+							],
+							"query": [
+								{
+									"key": "timestamp",
+									"value": "{{timestamp}}"
+								},
+								{
+									"key": "app_key",
+									"value": "{{app_key}}"
+								},
+								{
+									"key": "sign",
+									"value": "{{sign}}"
+								},
+								{
+									"key": "access_token",
+									"value": "{{access_token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateShippingInfo - SELF",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"// Replace secret with your own\r",
+									"var secret = \"\"\r",
+									"\r",
+									"function objKeySort(obj) {\r",
+									"    var newKey = Object.keys(obj).sort()\r",
+									"    var newObj = {}\r",
+									"    for (var i = 0; i < newKey.length; i++) {\r",
+									"        newObj[newKey[i]] = obj[newKey[i]]\r",
+									"    }\r",
+									"    return newObj\r",
+									"}\r",
+									"\r",
+									"function getEnvVar(k) {\r",
+									"    var v = pm.variables.get(k)\r",
+									"    if (v != null) {\r",
+									"        return v\r",
+									"    }\r",
+									"    v = pm.environment.get(k)\r",
+									"    if (v != null) {\r",
+									"        return v\r",
+									"    }\r",
+									"    v = pm.globals.get(k)\r",
+									"    if (v != null) {\r",
+									"        return v\r",
+									"    }\r",
+									"    return null\r",
+									"}\r",
+									"\r",
+									"var ts = Date.parse(new Date()) / 1000\r",
+									"pm.variables.set(\"timestamp\", ts)\r",
+									"\r",
+									"calSign = function(secret) {\r",
+									"    var ts = getEnvVar(\"timestamp\")\r",
+									"    console.log(ts);\r",
+									"    var queryParam = pm.request.url.query.members\r",
+									"    var param = {}\r",
+									"    for (var item in queryParam) {\r",
+									"        if (queryParam[item].key == \"timestamp\") {\r",
+									"            v = ts\r",
+									"        } else {\r",
+									"            var v = queryParam[item].value\r",
+									"            if (v == null || v == \"{{\" + queryParam[item].key + \"}}\") {\r",
+									"                v = getEnvVar(queryParam[item].key)\r",
+									"            }\r",
+									"        }\r",
+									"        param[queryParam[item].key] = v\r",
+									"    }\r",
+									"\r",
+									"    delete param[\"sign\"];\r",
+									"    delete param[\"access_token\"]\r",
+									"    var sortedObj = objKeySort(param)\r",
+									"    var signstring = secret + pm.request.url.getPath()\r",
+									"    for (var key in sortedObj) {\r",
+									"        signstring = signstring + key + sortedObj[key]\r",
+									"    }\r",
+									"    signstring = signstring + secret\r",
+									"    console.log(signstring)\r",
+									"    sign = CryptoJS.HmacSHA256(signstring, secret).toString()\r",
+									"    return sign\r",
+									"}\r",
+									"\r",
+									"var sign = calSign(secret)\r",
+									"console.log(sign)\r",
+									"pm.variables.set(\"sign\", sign)"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "VIEW",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/api/logistics/tracking?timestamp={{timestamp}}&app_key={{app_key}}&sign={{sign}}&access_token={{access_token}}&order_id=&tracking_number=&shipping_provider_id=",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"logistics",
+								"tracking"
+							],
+							"query": [
+								{
+									"key": "timestamp",
+									"value": "{{timestamp}}"
+								},
+								{
+									"key": "app_key",
+									"value": "{{app_key}}"
+								},
+								{
+									"key": "sign",
+									"value": "{{sign}}"
+								},
+								{
+									"key": "access_token",
+									"value": "{{access_token}}"
+								},
+								{
+									"key": "order_id",
+									"value": ""
+								},
+								{
+									"key": "tracking_number",
+									"value": ""
+								},
+								{
+									"key": "shipping_provider_id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetShippingDocument",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"// Replace secret with your own\r",
+									"var secret = \"\"\r",
+									"\r",
+									"function objKeySort(obj) {\r",
+									"    var newKey = Object.keys(obj).sort()\r",
+									"    var newObj = {}\r",
+									"    for (var i = 0; i < newKey.length; i++) {\r",
+									"        newObj[newKey[i]] = obj[newKey[i]]\r",
+									"    }\r",
+									"    return newObj\r",
+									"}\r",
+									"\r",
+									"function getEnvVar(k) {\r",
+									"    var v = pm.variables.get(k)\r",
+									"    if (v != null) {\r",
+									"        return v\r",
+									"    }\r",
+									"    v = pm.environment.get(k)\r",
+									"    if (v != null) {\r",
+									"        return v\r",
+									"    }\r",
+									"    v = pm.globals.get(k)\r",
+									"    if (v != null) {\r",
+									"        return v\r",
+									"    }\r",
+									"    return null\r",
+									"}\r",
+									"\r",
+									"var ts = Date.parse(new Date()) / 1000\r",
+									"pm.variables.set(\"timestamp\", ts)\r",
+									"\r",
+									"calSign = function(secret) {\r",
+									"    var ts = getEnvVar(\"timestamp\")\r",
+									"    console.log(ts);\r",
+									"    var queryParam = pm.request.url.query.members\r",
+									"    var param = {}\r",
+									"    for (var item in queryParam) {\r",
+									"        if (queryParam[item].key == \"timestamp\") {\r",
+									"            v = ts\r",
+									"        } else {\r",
+									"            var v = queryParam[item].value\r",
+									"            if (v == null || v == \"{{\" + queryParam[item].key + \"}}\") {\r",
+									"                v = getEnvVar(queryParam[item].key)\r",
+									"            }\r",
+									"        }\r",
+									"        param[queryParam[item].key] = v\r",
+									"    }\r",
+									"\r",
+									"    delete param[\"sign\"];\r",
+									"    delete param[\"access_token\"]\r",
+									"    var sortedObj = objKeySort(param)\r",
+									"    var signstring = secret + pm.request.url.getPath()\r",
+									"    for (var key in sortedObj) {\r",
+									"        signstring = signstring + key + sortedObj[key]\r",
+									"    }\r",
+									"    signstring = signstring + secret\r",
+									"    console.log(signstring)\r",
+									"    sign = CryptoJS.HmacSHA256(signstring, secret).toString()\r",
+									"    return sign\r",
+									"}\r",
+									"\r",
+									"var sign = calSign(secret)\r",
+									"console.log(sign)\r",
+									"pm.variables.set(\"sign\", sign)"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "VIEW",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/logistics/shipping_document?timestamp={{timestamp}}&app_key={{app_key}}&sign={{sign}}&access_token={{access_token}}&order_id=576461344021252703&document_type=SHIPPING_LABEL&document_size=A5",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"logistics",
+								"shipping_document"
+							],
+							"query": [
+								{
+									"key": "timestamp",
+									"value": "{{timestamp}}"
+								},
+								{
+									"key": "app_key",
+									"value": "{{app_key}}"
+								},
+								{
+									"key": "sign",
+									"value": "{{sign}}"
+								},
+								{
+									"key": "access_token",
+									"value": "{{access_token}}"
+								},
+								{
+									"key": "order_id",
+									"value": ""
+								},
+								{
+									"key": "document_type",
+									"value": "SHIPPING_LABEL",
+									"description": "Use this field to specify the type of document to obtain. Available value: SHIPPING_LABEL/ PICK_LIST/ SL_PL\nSL_PL is to print both SHIPPING_LABEL and PICK_LIST in one pdf"
+								},
+								{
+									"key": "document_size",
+									"value": "A5",
+									"description": "Use this field to specify the size of document to obtain. Available value: A6/A5.  A6 by default."
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "refresh_token",
+			"value": ""
+		},
+		{
+			"key": "auth_code",
+			"value": ""
+		},
+		{
+			"key": "app_key",
+			"value": ""
+		},
+		{
+			"key": "app_secret",
+			"value": ""
+		},
+		{
+			"key": "access_token",
+			"value": ""
+		},
+		{
+			"key": "base_url",
+			"value": "https://open-api.tiktokglobalshop.com"
+		}
+	]
+}
