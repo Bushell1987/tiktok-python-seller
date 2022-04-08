@@ -18,4 +18,4 @@ This is a simple build for inhouse connection's
 once you have perfromned this then you are ready to go live with the next steps
 
 
-This is all perfromed using the main.py file
+This is all perfromed using the authenticate/main.py file to save the keys in the yaml file
